@@ -1137,6 +1137,317 @@ body.sci-fi-universe {
 /* ==========================================================================
    Responsive Adaptations
    ========================================================================== */
+/* ==========================================================================
+   Cyber Quest Arcade & AI Bot Dialogue Terminal
+   ========================================================================== */
+.arcade-section {
+  position: relative;
+  background: radial-gradient(circle at 50% 30%, rgba(0, 242, 254, 0.05) 0%, transparent 70%);
+}
+
+.arcade-hud-frame {
+  margin: 24px 0;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(0, 242, 254, 0.2);
+  transition: transform var(--transition-smooth), border-color var(--transition-smooth);
+}
+
+.arcade-hud-frame:hover {
+  border-color: rgba(0, 242, 254, 0.45);
+  transform: translateY(-2px);
+}
+
+.responsive-svg-banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Playable Game Chassis */
+.game-chassis {
+  background: #030814;
+  border: 1.5px solid rgba(0, 242, 254, 0.35);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 242, 254, 0.12), 0 0 0 1px rgba(255, 255, 255, 0.05);
+  margin-top: 24px;
+}
+
+.game-header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #061022;
+  border-bottom: 1px solid rgba(0, 242, 254, 0.2);
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.game-title-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.game-dot.live {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-emerald);
+  box-shadow: 0 0 10px var(--accent-emerald);
+  animation: dotBlink 1.5s infinite alternate;
+}
+
+@keyframes dotBlink {
+  0% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
+
+.game-title-text {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  letter-spacing: 0.08em;
+}
+
+.game-stats-hud {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-badge {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  color: var(--text-muted);
+  background: rgba(255, 255, 255, 0.04);
+  padding: 4px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.stat-badge .stat-num {
+  color: var(--accent-cyan);
+  font-weight: 700;
+}
+
+.stat-badge .stat-rank {
+  color: var(--accent-emerald);
+  font-weight: 700;
+}
+
+.canvas-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 800 / 380;
+  max-height: 420px;
+  background: #02050D;
+}
+
+#arcadeCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.game-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(2, 6, 17, 0.88);
+  backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 10;
+  transition: opacity 0.3s ease;
+}
+
+.game-overlay.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.overlay-content {
+  text-align: center;
+  max-width: 480px;
+}
+
+.overlay-icon {
+  font-size: 40px;
+  margin-bottom: 12px;
+}
+
+.overlay-content h3 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 8px;
+  font-family: var(--font-sans);
+}
+
+.overlay-content p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.game-touch-controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #040A18;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 10px;
+}
+
+.arcade-ctrl-btn {
+  flex: 1;
+  padding: 10px 14px;
+  background: rgba(0, 242, 254, 0.06);
+  border: 1px solid rgba(0, 242, 254, 0.25);
+  border-radius: 8px;
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  user-select: none;
+}
+
+.arcade-ctrl-btn:hover, .arcade-ctrl-btn:active {
+  background: rgba(0, 242, 254, 0.18);
+  border-color: var(--accent-cyan);
+  transform: translateY(-1px);
+}
+
+.sound-toggle-btn {
+  flex: 0 0 auto;
+  color: var(--accent-emerald);
+  border-color: rgba(0, 245, 160, 0.3);
+  background: rgba(0, 245, 160, 0.06);
+}
+
+/* AI Bot Dialogue Terminal Sandbox */
+.bot-chat-terminal {
+  background: #040917;
+  border: 1.5px solid rgba(127, 0, 255, 0.35);
+  border-radius: 14px;
+  overflow: hidden;
+  margin-top: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.bot-selector-tabs {
+  display: flex;
+  background: #02050E;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
+}
+
+.bot-tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 18px;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.bot-tab:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.bot-tab.active {
+  color: #FFFFFF;
+  border-bottom-color: var(--accent-cyan);
+  background: rgba(0, 242, 254, 0.05);
+}
+
+.tab-indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.tab-indicator.cyan { background: var(--accent-cyan); box-shadow: 0 0 8px var(--accent-cyan); }
+.tab-indicator.green { background: var(--accent-emerald); box-shadow: 0 0 8px var(--accent-emerald); }
+.tab-indicator.purple { background: var(--accent-violet); box-shadow: 0 0 8px var(--accent-violet); }
+
+.bot-dialogue-screen {
+  padding: 20px;
+  min-height: 110px;
+  background: #030713;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.bot-avatar-badge {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  background: rgba(0, 242, 254, 0.1);
+  border: 1px solid rgba(0, 242, 254, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.bot-terminal-output {
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--text-main);
+}
+
+.bot-terminal-output p {
+  margin-bottom: 6px;
+}
+
+.bot-prompt-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 16px 20px;
+  background: #020610;
+}
+
+.prompt-chip {
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.prompt-chip:hover {
+  color: #FFFFFF;
+  border-color: var(--accent-cyan);
+  background: rgba(0, 242, 254, 0.08);
+  transform: translateY(-1px);
+}
+
 @media (max-width: 1024px) {
   .hero-grid { grid-template-columns: 1fr; }
   .control-grid, .secondary-projects-grid, .contact-grid { grid-template-columns: 1fr; }

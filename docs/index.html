@@ -33,6 +33,7 @@
 
       <nav class="nav-links" id="navLinks">
         <a href="#control-center" class="nav-link">Control Center</a>
+        <a href="#cyber-arcade" class="nav-link">🎮 Cyber Arcade</a>
         <a href="#skills-universe" class="nav-link">Skills Universe</a>
         <a href="#projects" class="nav-link">Project Lab</a>
         <a href="#mentrix" class="nav-link">Mentrix <span class="nav-flag-pill">Flagship</span></a>
@@ -262,6 +263,103 @@
                 <span class="m-val">TaskFlow (Railway) · GPT Helper</span>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2.5 Playable Cyber Quest Arcade & AI Bot Squadron Terminal -->
+    <section class="section arcade-section" id="cyber-arcade">
+      <div class="container">
+        <div class="section-tag">INTERACTIVE DEVELOPER ARENA // MINI-GAME</div>
+        <h2 class="section-title">Cyber Quest: The Architect's Trial</h2>
+        <p class="section-subtitle">Take control of AURA-01. Collect verified tech modules, dodge legacy security bugs, and unlock Kishore's Master Architect dossier.</p>
+
+        <!-- SVG Terminal Preview -->
+        <div class="arcade-hud-frame">
+          <img src="assets/arcade-quest-terminal.svg" alt="Developer Quest Terminal" class="responsive-svg-banner">
+        </div>
+
+        <!-- Playable Canvas Mini-Game Container -->
+        <div class="game-chassis">
+          <div class="game-header-bar">
+            <div class="game-title-group">
+              <span class="game-dot live"></span>
+              <span class="game-title-text">ARCADE ARENA // PILOT AURA-01</span>
+            </div>
+            <div class="game-stats-hud">
+              <span class="stat-badge">XP: <span id="gameScore" class="stat-num">0</span></span>
+              <span class="stat-badge">SHIELD: <span id="gameLives" class="stat-num">⚡⚡⚡</span></span>
+              <span class="stat-badge">RANK: <span id="gameRank" class="stat-rank">NOVICE</span></span>
+            </div>
+          </div>
+
+          <div class="canvas-wrapper">
+            <canvas id="arcadeCanvas" width="800" height="380"></canvas>
+            
+            <!-- Game Overlay Start / Game Over Screen -->
+            <div class="game-overlay" id="gameOverlay">
+              <div class="overlay-content">
+                <div class="overlay-icon">🎮</div>
+                <h3 id="overlayTitle">CYBER QUEST ARENA</h3>
+                <p id="overlayDesc">Pilot AURA-01 drone with [A / D] or [Arrow Keys] or Touch. Collect Tech Cubes (Python, Django, Flutter, ESP32, Ollama) and evade Red Bug Obstacles!</p>
+                <button class="btn btn-primary" id="btnStartGame">
+                  <span>LAUNCH MISSION</span>
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile / On-Screen Controls -->
+          <div class="game-touch-controls">
+            <button class="arcade-ctrl-btn" id="btnMoveLeft">◀ MOVE LEFT</button>
+            <button class="arcade-ctrl-btn sound-toggle-btn" id="btnToggleSound">🔊 SOUND FX</button>
+            <button class="arcade-ctrl-btn" id="btnMoveRight">MOVE RIGHT ▶</button>
+          </div>
+        </div>
+
+        <br/><br/>
+
+        <!-- AI Bot Companion Squadron Terminal -->
+        <div class="section-tag" style="margin-top: 30px;">AUTONOMOUS FLIGHT SQUADRON</div>
+        <h3 class="section-title" style="font-size: 28px;">AI Bot Dialogue Terminal</h3>
+        <p class="section-subtitle">Transmit real-time telemetry queries to Kishore's 3 specialized digital companion bots.</p>
+
+        <div class="arcade-hud-frame">
+          <img src="assets/ai-bot-squad.svg" alt="AI Bot Companion Squadron" class="responsive-svg-banner">
+        </div>
+
+        <!-- Interactive Bot Chat Sandbox -->
+        <div class="bot-chat-terminal">
+          <div class="bot-selector-tabs">
+            <button class="bot-tab active" data-bot="aura">
+              <span class="tab-indicator cyan"></span>
+              AURA-01 (Architecture)
+            </button>
+            <button class="bot-tab" data-bot="puribot">
+              <span class="tab-indicator green"></span>
+              CYBER-PURIBOT (IoT &amp; Robotics)
+            </button>
+            <button class="bot-tab" data-bot="vex">
+              <span class="tab-indicator purple"></span>
+              NEO-VEX (Security &amp; Gatekeeper)
+            </button>
+          </div>
+
+          <div class="bot-dialogue-screen">
+            <div class="bot-avatar-badge" id="activeBotAvatar">🤖 AURA-01</div>
+            <div class="bot-terminal-output" id="botTerminalOutput">
+              <p class="bot-log-line intro"><code>[AURA-01 ONLINE]</code> Welcome, visitor. I monitor Kishore M's full-stack Django architecture and local AI implementations. Select an inquiry below:</p>
+            </div>
+          </div>
+
+          <div class="bot-prompt-chips">
+            <button class="prompt-chip" data-query="mentrix">Tell me about Mentrix Architecture 🏛️</button>
+            <button class="prompt-chip" data-query="robotics">How does the PuriBot ESP32 work? 📡</button>
+            <button class="prompt-chip" data-query="research">Explain Kishore's 2 Research Papers 🔬</button>
+            <button class="prompt-chip" data-query="security">How is Enterprise Security enforced? 🛡️</button>
+            <button class="prompt-chip" data-query="hire">How can I hire or contact Kishore? 💼</button>
           </div>
         </div>
       </div>

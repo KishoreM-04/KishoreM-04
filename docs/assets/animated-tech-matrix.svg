@@ -1,215 +1,204 @@
-<svg fill="none" viewBox="0 0 900 240" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-  <foreignObject width="100%" height="100%">
-    <div xmlns="http://www.w3.org/1999/xhtml">
-      <style>
-        .grid-container {
-          display: grid;
-          grid-template-columns: repeat(4, 1fr);
-          gap: 16px;
-          width: 100%;
-          box-sizing: border-box;
-          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-        }
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 230" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradients -->
+    <linearGradient id="matrixBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B17"/>
+      <stop offset="100%" stop-color="#02060F"/>
+    </linearGradient>
 
-        .pillar-card {
-          position: relative;
-          background: #090E1A;
-          background: linear-gradient(145deg, #0A101D 0%, #060A13 100%);
-          border-radius: 12px;
-          border: 1px solid rgba(255, 255, 255, 0.08);
-          padding: 20px 18px;
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          overflow: hidden;
-          transition: border-color 0.3s ease;
-        }
+    <!-- Pillar Gradients -->
+    <linearGradient id="colCyan" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A192F"/>
+      <stop offset="100%" stop-color="#060E1D"/>
+    </linearGradient>
+    <linearGradient id="colGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#081E19"/>
+      <stop offset="100%" stop-color="#04120F"/>
+    </linearGradient>
+    <linearGradient id="colPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#160C29"/>
+      <stop offset="100%" stop-color="#0A0515"/>
+    </linearGradient>
+    <linearGradient id="colBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1C33"/>
+      <stop offset="100%" stop-color="#050E1A"/>
+    </linearGradient>
 
-        .pillar-card::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
-          opacity: 0.8;
-          animation: scanline 4s ease-in-out infinite alternate;
-        }
+    <filter id="neonBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
 
-        .card-1 { --accent-color: #00F2FE; }
-        .card-2 { --accent-color: #38BDF8; }
-        .card-3 { --accent-color: #00F5A0; }
-        .card-4 { --accent-color: #A855F7; }
+  <style>
+    .mono { font-family: "JetBrains Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
 
-        @keyframes scanline {
-          0% { opacity: 0.3; transform: scaleX(0.7); }
-          100% { opacity: 1; transform: scaleX(1); }
-        }
+    /* Scanline pulse across pillars */
+    .scan-beam {
+      animation: beamSweep 4s ease-in-out infinite alternate;
+    }
+    @keyframes beamSweep {
+      0%   { opacity: 0.3; transform: scaleX(0.7); }
+      100% { opacity: 1; transform: scaleX(1); }
+    }
 
-        .card-header {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          margin-bottom: 12px;
-        }
+    /* Live status dot pulse */
+    .pulse-dot {
+      animation: dotPulse 2s ease-in-out infinite alternate;
+    }
+    @keyframes dotPulse {
+      0%   { opacity: 0.5; }
+      100% { opacity: 1; filter: drop-shadow(0 0 5px #00F2FE); }
+    }
 
-        .icon-box {
-          width: 32px;
-          height: 32px;
-          border-radius: 8px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 15px;
-          background: rgba(255, 255, 255, 0.04);
-          border: 1px solid rgba(255, 255, 255, 0.08);
-        }
+    @media (prefers-reduced-motion: reduce) {
+      .scan-beam, .pulse-dot { animation: none !important; }
+    }
+  </style>
 
-        .pillar-title {
-          font-size: 13.5px;
-          font-weight: 700;
-          color: #F1F5F9;
-          letter-spacing: -0.01em;
-          margin: 0;
-        }
+  <!-- Canvas Chassis -->
+  <rect width="880" height="230" rx="14" fill="url(#matrixBg)" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1.6"/>
 
-        .pillar-sub {
-          font-size: 11px;
-          color: var(--accent-color);
-          font-weight: 600;
-          letter-spacing: 0.04em;
-          text-transform: uppercase;
-        }
+  <!-- Top Marquee Header -->
+  <g transform="translate(24, 26)">
+    <text fill="#00F2FE" class="mono" font-size="11" font-weight="800" letter-spacing="0.1em">⚡ VERIFIED TECHNICAL ARSENAL // CORE COMPETENCIES</text>
+    <rect x="710" y="-12" width="120" height="20" rx="4" fill="rgba(0,242,254,0.08)" stroke="rgba(0,242,254,0.3)" stroke-width="0.8"/>
+    <circle cx="722" cy="-2" r="3" fill="#00F2FE" class="pulse-dot"/>
+    <text x="774" y="2" text-anchor="middle" fill="#00F2FE" class="mono" font-size="9" font-weight="700">SYNCHRONIZED</text>
+  </g>
+  <line x1="24" y1="40" x2="856" y2="40" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
 
-        .tags-cluster {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 6px;
-          margin-top: 10px;
-        }
+  <!-- ==================== PILLAR 1: BACKEND SYSTEMS ==================== -->
+  <g transform="translate(24, 54)">
+    <rect width="198" height="156" rx="10" fill="url(#colCyan)" stroke="rgba(0, 242, 254, 0.35)" stroke-width="1.2"/>
+    <line x1="12" y1="0" x2="186" y2="0" stroke="#00F2FE" stroke-width="2" class="scan-beam"/>
 
-        .tech-pill {
-          font-size: 11px;
-          color: #94A3B8;
-          background: rgba(255, 255, 255, 0.03);
-          border: 1px solid rgba(255, 255, 255, 0.06);
-          padding: 3px 8px;
-          border-radius: 6px;
-          font-weight: 500;
-        }
+    <!-- Icon & Title -->
+    <rect x="14" y="14" width="28" height="28" rx="6" fill="#040D1B" stroke="#00F2FE" stroke-width="1"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">⚡</text>
+    <text x="50" y="26" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">BACKEND</text>
+    <text x="50" y="38" fill="#38BDF8" class="mono" font-size="9" font-weight="600">ENTERPRISE CORE</text>
 
-        .tech-pill.highlight {
-          color: #E2E8F0;
-          border-color: rgba(255, 255, 255, 0.14);
-          background: rgba(255, 255, 255, 0.06);
-        }
+    <!-- Skills Badges -->
+    <g transform="translate(14, 56)">
+      <rect x="0" y="0" width="58" height="20" rx="4" fill="#0E243F" stroke="rgba(0,242,254,0.25)" stroke-width="0.8"/>
+      <text x="29" y="14" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">Python</text>
 
-        .status-dot {
-          width: 6px;
-          height: 6px;
-          border-radius: 50%;
-          background: var(--accent-color);
-          box-shadow: 0 0 8px var(--accent-color);
-          display: inline-block;
-          margin-right: 4px;
-          animation: pulseDot 2s infinite ease-in-out;
-        }
+      <rect x="64" y="0" width="70" height="20" rx="4" fill="#0E243F" stroke="rgba(0,242,254,0.25)" stroke-width="0.8"/>
+      <text x="99" y="14" text-anchor="middle" fill="#00F2FE" class="mono" font-size="9.5" font-weight="600">Django 5</text>
 
-        @keyframes pulseDot {
-          0%, 100% { opacity: 0.5; transform: scale(0.9); }
-          50% { opacity: 1; transform: scale(1.2); }
-        }
+      <rect x="140" y="0" width="46" height="20" rx="4" fill="#0E243F" stroke="rgba(0,242,254,0.25)" stroke-width="0.8"/>
+      <text x="163" y="14" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">Flask</text>
 
-        @media (prefers-reduced-motion: reduce) {
-          .pillar-card::before, .status-dot {
-            animation: none !important;
-          }
-        }
-      </style>
+      <rect x="0" y="26" width="40" height="20" rx="4" fill="#0E243F" stroke="rgba(0,242,254,0.25)" stroke-width="0.8"/>
+      <text x="20" y="40" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">PHP</text>
 
-      <div class="grid-container">
-        <!-- 1. Backend & Architecture -->
-        <div class="pillar-card card-1">
-          <div>
-            <div class="card-header">
-              <div class="icon-box">⚡</div>
-              <div>
-                <div class="pillar-sub">Enterprise Core</div>
-                <h3 class="pillar-title">Backend Systems</h3>
-              </div>
-            </div>
-            <div class="tags-cluster">
-              <span class="tech-pill highlight"><span class="status-dot"></span>Django 5.x</span>
-              <span class="tech-pill highlight">Python 3.11</span>
-              <span class="tech-pill">PostgreSQL</span>
-              <span class="tech-pill">MySQL</span>
-              <span class="tech-pill">REST APIs</span>
-              <span class="tech-pill">Gunicorn</span>
-            </div>
-          </div>
-        </div>
+      <rect x="46" y="26" width="42" height="20" rx="4" fill="#0E243F" stroke="rgba(0,242,254,0.25)" stroke-width="0.8"/>
+      <text x="67" y="40" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">Java</text>
 
-        <!-- 2. Mobile & Cross-Platform -->
-        <div class="pillar-card card-2">
-          <div>
-            <div class="card-header">
-              <div class="icon-box">📱</div>
-              <div>
-                <div class="pillar-sub">Client Ecosystems</div>
-                <h3 class="pillar-title">Mobile Engineering</h3>
-              </div>
-            </div>
-            <div class="tags-cluster">
-              <span class="tech-pill highlight"><span class="status-dot"></span>Android (Java)</span>
-              <span class="tech-pill highlight">Flutter / Dart</span>
-              <span class="tech-pill">CameraX / Overlays</span>
-              <span class="tech-pill">Volley / Picasso</span>
-              <span class="tech-pill">Gradle Kotlin DSL</span>
-            </div>
-          </div>
-        </div>
+      <rect x="94" y="26" width="38" height="20" rx="4" fill="#0E243F" stroke="rgba(0,242,254,0.25)" stroke-width="0.8"/>
+      <text x="113" y="40" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">C++</text>
 
-        <!-- 3. IoT & Robotics -->
-        <div class="pillar-card card-3">
-          <div>
-            <div class="card-header">
-              <div class="icon-box">📡</div>
-              <div>
-                <div class="pillar-sub">Hardware &amp; Telemetry</div>
-                <h3 class="pillar-title">IoT Systems</h3>
-              </div>
-            </div>
-            <div class="tags-cluster">
-              <span class="tech-pill highlight"><span class="status-dot"></span>MQTT Broker</span>
-              <span class="tech-pill highlight">Robot Telemetry</span>
-              <span class="tech-pill">Air Quality Sensor</span>
-              <span class="tech-pill">Realtime Signals</span>
-              <span class="tech-pill">Device Remote</span>
-            </div>
-          </div>
-        </div>
+      <rect x="138" y="26" width="30" height="20" rx="4" fill="#0E243F" stroke="rgba(0,242,254,0.25)" stroke-width="0.8"/>
+      <text x="153" y="40" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">C</text>
 
-        <!-- 4. Applied AI & Cloud -->
-        <div class="pillar-card card-4">
-          <div>
-            <div class="card-header">
-              <div class="icon-box">🧠</div>
-              <div>
-                <div class="pillar-sub">Intelligence &amp; Ops</div>
-                <h3 class="pillar-title">AI &amp; Cloud Tooling</h3>
-              </div>
-            </div>
-            <div class="tags-cluster">
-              <span class="tech-pill highlight"><span class="status-dot"></span>Local LLMs (Ollama)</span>
-              <span class="tech-pill highlight">OpenAI API</span>
-              <span class="tech-pill">Railway PaaS</span>
-              <span class="tech-pill">WhiteNoise</span>
-              <span class="tech-pill">Git / CI/CD</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </foreignObject>
+      <!-- Sub-spec info -->
+      <text x="0" y="68" fill="#94A3B8" class="sans" font-size="8.5">RBAC · Concurrency Guards</text>
+      <text x="0" y="81" fill="#38BDF8" class="mono" font-size="8.5">REST APIs · Gunicorn WSGI</text>
+    </g>
+  </g>
+
+  <!-- ==================== PILLAR 2: RELATIONAL DATABASES ==================== -->
+  <g transform="translate(236, 54)">
+    <rect width="198" height="156" rx="10" fill="url(#colBlue)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1.2"/>
+    <line x1="12" y1="0" x2="186" y2="0" stroke="#38BDF8" stroke-width="2" class="scan-beam"/>
+
+    <!-- Icon & Title -->
+    <rect x="14" y="14" width="28" height="28" rx="6" fill="#051325" stroke="#38BDF8" stroke-width="1"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">🗄️</text>
+    <text x="50" y="26" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">DATABASES</text>
+    <text x="50" y="38" fill="#38BDF8" class="mono" font-size="9" font-weight="600">RELATIONAL PIPELINES</text>
+
+    <!-- Skills Badges -->
+    <g transform="translate(14, 56)">
+      <rect x="0" y="0" width="56" height="20" rx="4" fill="#0A2242" stroke="rgba(56,189,248,0.25)" stroke-width="0.8"/>
+      <text x="28" y="14" text-anchor="middle" fill="#38BDF8" class="mono" font-size="9.5" font-weight="600">MySQL</text>
+
+      <rect x="62" y="0" width="80" height="20" rx="4" fill="#0A2242" stroke="rgba(56,189,248,0.25)" stroke-width="0.8"/>
+      <text x="102" y="14" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">PostgreSQL</text>
+
+      <rect x="0" y="26" width="56" height="20" rx="4" fill="#0A2242" stroke="rgba(56,189,248,0.25)" stroke-width="0.8"/>
+      <text x="28" y="40" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">SQLite</text>
+
+      <rect x="62" y="26" width="58" height="20" rx="4" fill="#0A2242" stroke="rgba(56,189,248,0.25)" stroke-width="0.8"/>
+      <text x="91" y="40" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">Oracle</text>
+
+      <!-- Sub-spec info -->
+      <text x="0" y="68" fill="#94A3B8" class="sans" font-size="8.5">Schema Normalization (3NF)</text>
+      <text x="0" y="81" fill="#38BDF8" class="mono" font-size="8.5">Atomic Transactions · Indexing</text>
+    </g>
+  </g>
+
+  <!-- ==================== PILLAR 3: MOBILE & IOT ==================== -->
+  <g transform="translate(448, 54)">
+    <rect width="198" height="156" rx="10" fill="url(#colGreen)" stroke="rgba(0, 245, 160, 0.35)" stroke-width="1.2"/>
+    <line x1="12" y1="0" x2="186" y2="0" stroke="#00F5A0" stroke-width="2" class="scan-beam"/>
+
+    <!-- Icon & Title -->
+    <rect x="14" y="14" width="28" height="28" rx="6" fill="#041B15" stroke="#00F5A0" stroke-width="1"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">📡</text>
+    <text x="50" y="26" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">MOBILE &amp; IOT</text>
+    <text x="50" y="38" fill="#00F5A0" class="mono" font-size="9" font-weight="600">CLIENT &amp; EMBEDDED</text>
+
+    <!-- Skills Badges -->
+    <g transform="translate(14, 56)">
+      <rect x="0" y="0" width="86" height="20" rx="4" fill="#0A3326" stroke="rgba(0,245,160,0.25)" stroke-width="0.8"/>
+      <text x="43" y="14" text-anchor="middle" fill="#00F5A0" class="mono" font-size="9.5" font-weight="600">Android Java</text>
+
+      <rect x="92" y="0" width="56" height="20" rx="4" fill="#0A3326" stroke="rgba(0,245,160,0.25)" stroke-width="0.8"/>
+      <text x="120" y="14" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">Flutter</text>
+
+      <rect x="0" y="26" width="54" height="20" rx="4" fill="#0A3326" stroke="rgba(0,245,160,0.25)" stroke-width="0.8"/>
+      <text x="27" y="40" text-anchor="middle" fill="#00F5A0" class="mono" font-size="9.5" font-weight="600">ESP32</text>
+
+      <rect x="60" y="26" width="70" height="20" rx="4" fill="#0A3326" stroke="rgba(0,245,160,0.25)" stroke-width="0.8"/>
+      <text x="95" y="40" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">IoT Sensors</text>
+
+      <!-- Sub-spec info -->
+      <text x="0" y="68" fill="#94A3B8" class="sans" font-size="8.5">Camera Overlays · Picasso Cache</text>
+      <text x="0" y="81" fill="#00F5A0" class="mono" font-size="8.5">Motor Controls · Wireless Ingestion</text>
+    </g>
+  </g>
+
+  <!-- ==================== PILLAR 4: AI & CLOUD DEVOPS ==================== -->
+  <g transform="translate(660, 54)">
+    <rect width="196" height="156" rx="10" fill="url(#colPurple)" stroke="rgba(192, 132, 252, 0.35)" stroke-width="1.2"/>
+    <line x1="12" y1="0" x2="184" y2="0" stroke="#C084FC" stroke-width="2" class="scan-beam"/>
+
+    <!-- Icon & Title -->
+    <rect x="14" y="14" width="28" height="28" rx="6" fill="#180A2E" stroke="#C084FC" stroke-width="1"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">🤖</text>
+    <text x="50" y="26" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">AI &amp; CLOUD</text>
+    <text x="50" y="38" fill="#C084FC" class="mono" font-size="9" font-weight="600">EDGE INTELLIGENCE</text>
+
+    <!-- Skills Badges -->
+    <g transform="translate(14, 56)">
+      <rect x="0" y="0" width="80" height="20" rx="4" fill="#29124E" stroke="rgba(192,132,252,0.25)" stroke-width="0.8"/>
+      <text x="40" y="14" text-anchor="middle" fill="#C084FC" class="mono" font-size="9.5" font-weight="600">Ollama LLM</text>
+
+      <rect x="86" y="0" width="76" height="20" rx="4" fill="#29124E" stroke="rgba(192,132,252,0.25)" stroke-width="0.8"/>
+      <text x="124" y="14" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">ReportLab</text>
+
+      <rect x="0" y="26" width="60" height="20" rx="4" fill="#29124E" stroke="rgba(192,132,252,0.25)" stroke-width="0.8"/>
+      <text x="30" y="40" text-anchor="middle" fill="#E2E8F0" class="mono" font-size="9.5">Railway</text>
+
+      <rect x="66" y="26" width="56" height="20" rx="4" fill="#29124E" stroke="rgba(192,132,252,0.25)" stroke-width="0.8"/>
+      <text x="94" y="40" text-anchor="middle" fill="#C084FC" class="mono" font-size="9.5" font-weight="600">Git CI/CD</text>
+
+      <!-- Sub-spec info -->
+      <text x="0" y="68" fill="#94A3B8" class="sans" font-size="8.5">On-Premise Privacy Inference</text>
+      <text x="0" y="81" fill="#C084FC" class="mono" font-size="8.5">Dynamic Dossiers · Cloud Deploy</text>
+    </g>
+  </g>
 </svg>

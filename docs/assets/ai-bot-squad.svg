@@ -1,0 +1,228 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 260" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Background Card Gradient -->
+    <linearGradient id="squadBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050B17"/>
+      <stop offset="50%" stop-color="#0A142A"/>
+      <stop offset="100%" stop-color="#02060F"/>
+    </linearGradient>
+
+    <!-- Bot Glow Gradients -->
+    <linearGradient id="auraAura" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="roboGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F5A0"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+    <linearGradient id="vexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7F00FF"/>
+      <stop offset="100%" stop-color="#C084FC"/>
+    </linearGradient>
+
+    <!-- Laser & Glow Filter -->
+    <filter id="neonGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .mono { font-family: "JetBrains Mono", Consolas, monospace; }
+    .sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
+
+    /* Bot 1: AURA-01 Hover Float */
+    .bot-aura {
+      animation: auraFloat 3.5s ease-in-out infinite alternate;
+    }
+    @keyframes auraFloat {
+      0%   { transform: translateY(0px) rotate(0deg); }
+      50%  { transform: translateY(-10px) rotate(2deg); }
+      100% { transform: translateY(4px) rotate(-1.5deg); }
+    }
+
+    /* Bot 2: CYBER-ROBO Hover & Jet Vibration */
+    .bot-robo {
+      animation: roboHover 2.8s ease-in-out infinite alternate;
+    }
+    @keyframes roboHover {
+      0%   { transform: translateY(0px) scale(0.98); }
+      50%  { transform: translateY(-8px) scale(1.02); }
+      100% { transform: translateY(3px) scale(0.99); }
+    }
+
+    /* Bot 3: NEO-VEX Security Sentinel Pulse */
+    .bot-vex {
+      animation: vexFloat 4.2s ease-in-out infinite alternate;
+    }
+    @keyframes vexFloat {
+      0%   { transform: translateY(0px) rotate(-1deg); }
+      50%  { transform: translateY(-12px) rotate(2deg); }
+      100% { transform: translateY(5px) rotate(0deg); }
+    }
+
+    /* Rotating Radar & Gyro Rings */
+    .spin-ring {
+      animation: ringSpin 6s linear infinite;
+    }
+    @keyframes ringSpin {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    .radar-sweep {
+      animation: sweepRadar 4s linear infinite;
+    }
+    @keyframes sweepRadar {
+      from { transform: rotate(0deg); }
+      to   { transform: rotate(360deg); }
+    }
+
+    /* Natural Eye Blink */
+    .bot-blink {
+      animation: naturalBlink 4s infinite;
+      transform-origin: center;
+    }
+    @keyframes naturalBlink {
+      0%, 46%, 49%, 100% { transform: scaleY(1); }
+      47.5% { transform: scaleY(0.1); }
+    }
+
+    /* Pulse Glow */
+    .signal-pulse {
+      animation: sigPulse 2s ease-in-out infinite alternate;
+    }
+    @keyframes sigPulse {
+      0%   { opacity: 0.4; }
+      100% { opacity: 1; filter: drop-shadow(0 0 6px #00F2FE); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bot-aura, .bot-robo, .bot-vex, .spin-ring, .radar-sweep, .bot-blink, .signal-pulse {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <!-- Main Chassis Container -->
+  <rect width="880" height="260" rx="14" fill="url(#squadBg)" stroke="rgba(0, 242, 254, 0.35)" stroke-width="1.6"/>
+
+  <!-- Background Ambient Hex Grid -->
+  <g opacity="0.05" stroke="#00F2FE" stroke-width="1">
+    <line x1="0" y1="65" x2="880" y2="65"/>
+    <line x1="0" y1="130" x2="880" y2="130"/>
+    <line x1="0" y1="195" x2="880" y2="195"/>
+    <line x1="293" y1="0" x2="293" y2="260"/>
+    <line x1="586" y1="0" x2="586" y2="260"/>
+  </g>
+
+  <!-- Top Marquee Bar -->
+  <g transform="translate(28, 28)">
+    <text fill="#00F2FE" class="mono" font-size="11" font-weight="800" letter-spacing="0.1em">🤖 AI COMPANION SQUADRON // ACTIVE FLIGHT ROSTER</text>
+    <rect x="700" y="-12" width="124" height="20" rx="4" fill="rgba(0,245,160,0.1)" stroke="rgba(0,245,160,0.4)" stroke-width="0.8"/>
+    <circle cx="712" cy="-2" r="3" fill="#00F5A0" class="signal-pulse"/>
+    <text x="764" y="2" text-anchor="middle" fill="#00F5A0" class="mono" font-size="9" font-weight="700">3 UNITS ONLINE</text>
+  </g>
+  <line x1="28" y1="42" x2="852" y2="42" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+
+  <!-- ==================== BOT 1: AURA-01 (ARCHITECT AI) ==================== -->
+  <g transform="translate(40, 58)">
+    <!-- Sub-card background -->
+    <rect width="255" height="182" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(0,242,254,0.25)" stroke-width="1"/>
+
+    <!-- Bot 1 Vector Avatar -->
+    <g transform="translate(127, 56)" class="bot-aura">
+      <!-- Gyro Ring -->
+      <g class="spin-ring">
+        <ellipse cx="0" cy="0" rx="36" ry="12" stroke="rgba(0,242,254,0.6)" stroke-width="1.4" stroke-dasharray="8 6" fill="none"/>
+      </g>
+      <!-- Thruster Jet -->
+      <path d="M -8 24 Q 0 40 8 24 Z" fill="#00F2FE" opacity="0.8"/>
+      <!-- Body -->
+      <circle cx="0" cy="0" r="26" fill="#0B132B" stroke="#00F2FE" stroke-width="1.8"/>
+      <!-- Visor -->
+      <rect x="-16" y="-7" width="32" height="14" rx="6" fill="#020617" stroke="#38BDF8" stroke-width="1"/>
+      <!-- Glowing Eyes -->
+      <g class="bot-blink">
+        <circle cx="-7" cy="0" r="3.5" fill="#00F2FE" filter="url(#neonGlow)"/>
+        <circle cx="7" cy="0" r="3.5" fill="#00F2FE" filter="url(#neonGlow)"/>
+      </g>
+      <!-- Antenna -->
+      <line x1="0" y1="-26" x2="0" y2="-36" stroke="#64748B" stroke-width="2"/>
+      <circle cx="0" cy="-37" r="3" fill="#00F5A0" filter="url(#neonGlow)"/>
+    </g>
+
+    <!-- Bot Info & Dialogue -->
+    <text x="127" y="112" text-anchor="middle" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">AURA-01</text>
+    <text x="127" y="125" text-anchor="middle" fill="#00F2FE" class="mono" font-size="9" font-weight="600">PRIMARY SYSTEM COMPANION</text>
+
+    <!-- Holographic speech bubble -->
+    <rect x="14" y="136" width="227" height="34" rx="6" fill="#040915" stroke="rgba(0,242,254,0.3)" stroke-width="0.8"/>
+    <text x="22" y="150" fill="#94A3B8" class="sans" font-size="9">"Orchestrating Mentrix Django 5.x &amp;</text>
+    <text x="22" y="162" fill="#00F2FE" class="mono" font-size="8.5" font-weight="600">Ollama local LLM neural inference."</text>
+  </g>
+
+  <!-- ==================== BOT 2: CYBER-ROBO / PURIBOT (IOT SPECIALIST) ==================== -->
+  <g transform="translate(312, 58)">
+    <rect width="255" height="182" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(0,245,160,0.25)" stroke-width="1"/>
+
+    <!-- Bot 2 Vector Avatar -->
+    <g transform="translate(127, 56)" class="bot-robo">
+      <!-- Gas Sensor Wave Rings -->
+      <ellipse cx="0" cy="-10" rx="34" ry="14" stroke="rgba(0,245,160,0.4)" stroke-width="1.2" stroke-dasharray="4 4" fill="none"/>
+      <!-- Robotic Chassis with Wheels / Tank Treads -->
+      <rect x="-24" y="-18" width="48" height="32" rx="8" fill="#061A14" stroke="#00F5A0" stroke-width="1.8"/>
+      <!-- Sensor Dome -->
+      <path d="M -12 -18 Q 0 -30 12 -18 Z" fill="#10B981" opacity="0.6"/>
+      <!-- Digital Eyes -->
+      <g class="bot-blink">
+        <rect x="-15" y="-10" width="10" height="6" rx="2" fill="#00F5A0" filter="url(#neonGlow)"/>
+        <rect x="5" y="-10" width="10" height="6" rx="2" fill="#00F5A0" filter="url(#neonGlow)"/>
+      </g>
+      <!-- Telemetry Treads -->
+      <rect x="-28" y="14" width="56" height="8" rx="3" fill="#022C22" stroke="#059669" stroke-width="1"/>
+      <circle cx="-18" cy="18" r="2.5" fill="#34D399"/>
+      <circle cx="0" cy="18" r="2.5" fill="#34D399"/>
+      <circle cx="18" cy="18" r="2.5" fill="#34D399"/>
+    </g>
+
+    <!-- Bot Info & Dialogue -->
+    <text x="127" y="112" text-anchor="middle" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">CYBER-PURIBOT</text>
+    <text x="127" y="125" text-anchor="middle" fill="#00F5A0" class="mono" font-size="9" font-weight="600">EMBEDDED IOT CONTROLLER</text>
+
+    <!-- Speech bubble -->
+    <rect x="14" y="136" width="227" height="34" rx="6" fill="#03120E" stroke="rgba(0,245,160,0.3)" stroke-width="0.8"/>
+    <text x="22" y="150" fill="#94A3B8" class="sans" font-size="9">"ESP32 telemetry link active. PM2.5</text>
+    <text x="22" y="162" fill="#00F5A0" class="mono" font-size="8.5" font-weight="600">&amp; hazardous gas levels nominal."</text>
+  </g>
+
+  <!-- ==================== BOT 3: NEO-VEX (SECURITY SENTINEL) ==================== -->
+  <g transform="translate(584, 58)">
+    <rect width="255" height="182" rx="10" fill="rgba(255,255,255,0.02)" stroke="rgba(192,132,252,0.25)" stroke-width="1"/>
+
+    <!-- Bot 3 Vector Avatar -->
+    <g transform="translate(127, 56)" class="bot-vex">
+      <!-- Radar Sweep Line -->
+      <g class="radar-sweep">
+        <line x1="0" y1="0" x2="30" y2="-20" stroke="#C084FC" stroke-width="1.5" stroke-dasharray="3 3"/>
+      </g>
+      <!-- Hex Shield -->
+      <polygon points="0,-30 26,-15 26,15 0,30 -26,15 -26,-15" fill="#130826" stroke="#A855F7" stroke-width="1.8"/>
+      <!-- Inner Shield Glow -->
+      <polygon points="0,-22 18,-11 18,11 0,22 -18,11 -18,-11" fill="#240D4A" stroke="#C084FC" stroke-width="1"/>
+      <!-- Cyber Security Eye Core -->
+      <circle cx="0" cy="0" r="8" fill="#7F00FF" filter="url(#neonGlow)"/>
+      <circle cx="0" cy="0" r="3" fill="#FFFFFF"/>
+    </g>
+
+    <!-- Bot Info & Dialogue -->
+    <text x="127" y="112" text-anchor="middle" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">NEO-VEX</text>
+    <text x="127" y="125" text-anchor="middle" fill="#C084FC" class="mono" font-size="9" font-weight="600">CYBER GATEKEEPER &amp; RBAC</text>
+
+    <!-- Speech bubble -->
+    <rect x="14" y="136" width="227" height="34" rx="6" fill="#100520" stroke="rgba(192,132,252,0.3)" stroke-width="0.8"/>
+    <text x="22" y="150" fill="#94A3B8" class="sans" font-size="9">"Domain-restricted OAuth2 fortified.</text>
+    <text x="22" y="162" fill="#C084FC" class="mono" font-size="8.5" font-weight="600">Zero session concurrency leaks."</text>
+  </g>
+</svg>
