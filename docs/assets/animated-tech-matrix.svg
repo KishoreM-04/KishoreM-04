@@ -1,0 +1,215 @@
+<svg fill="none" viewBox="0 0 900 240" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .grid-container {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 16px;
+          width: 100%;
+          box-sizing: border-box;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .pillar-card {
+          position: relative;
+          background: #090E1A;
+          background: linear-gradient(145deg, #0A101D 0%, #060A13 100%);
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          padding: 20px 18px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          overflow: hidden;
+          transition: border-color 0.3s ease;
+        }
+
+        .pillar-card::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: 2px;
+          background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+          opacity: 0.8;
+          animation: scanline 4s ease-in-out infinite alternate;
+        }
+
+        .card-1 { --accent-color: #00F2FE; }
+        .card-2 { --accent-color: #38BDF8; }
+        .card-3 { --accent-color: #00F5A0; }
+        .card-4 { --accent-color: #A855F7; }
+
+        @keyframes scanline {
+          0% { opacity: 0.3; transform: scaleX(0.7); }
+          100% { opacity: 1; transform: scaleX(1); }
+        }
+
+        .card-header {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-bottom: 12px;
+        }
+
+        .icon-box {
+          width: 32px;
+          height: 32px;
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 15px;
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .pillar-title {
+          font-size: 13.5px;
+          font-weight: 700;
+          color: #F1F5F9;
+          letter-spacing: -0.01em;
+          margin: 0;
+        }
+
+        .pillar-sub {
+          font-size: 11px;
+          color: var(--accent-color);
+          font-weight: 600;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+
+        .tags-cluster {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 6px;
+          margin-top: 10px;
+        }
+
+        .tech-pill {
+          font-size: 11px;
+          color: #94A3B8;
+          background: rgba(255, 255, 255, 0.03);
+          border: 1px solid rgba(255, 255, 255, 0.06);
+          padding: 3px 8px;
+          border-radius: 6px;
+          font-weight: 500;
+        }
+
+        .tech-pill.highlight {
+          color: #E2E8F0;
+          border-color: rgba(255, 255, 255, 0.14);
+          background: rgba(255, 255, 255, 0.06);
+        }
+
+        .status-dot {
+          width: 6px;
+          height: 6px;
+          border-radius: 50%;
+          background: var(--accent-color);
+          box-shadow: 0 0 8px var(--accent-color);
+          display: inline-block;
+          margin-right: 4px;
+          animation: pulseDot 2s infinite ease-in-out;
+        }
+
+        @keyframes pulseDot {
+          0%, 100% { opacity: 0.5; transform: scale(0.9); }
+          50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .pillar-card::before, .status-dot {
+            animation: none !important;
+          }
+        }
+      </style>
+
+      <div class="grid-container">
+        <!-- 1. Backend & Architecture -->
+        <div class="pillar-card card-1">
+          <div>
+            <div class="card-header">
+              <div class="icon-box">⚡</div>
+              <div>
+                <div class="pillar-sub">Enterprise Core</div>
+                <h3 class="pillar-title">Backend Systems</h3>
+              </div>
+            </div>
+            <div class="tags-cluster">
+              <span class="tech-pill highlight"><span class="status-dot"></span>Django 5.x</span>
+              <span class="tech-pill highlight">Python 3.11</span>
+              <span class="tech-pill">PostgreSQL</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">REST APIs</span>
+              <span class="tech-pill">Gunicorn</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Mobile & Cross-Platform -->
+        <div class="pillar-card card-2">
+          <div>
+            <div class="card-header">
+              <div class="icon-box">📱</div>
+              <div>
+                <div class="pillar-sub">Client Ecosystems</div>
+                <h3 class="pillar-title">Mobile Engineering</h3>
+              </div>
+            </div>
+            <div class="tags-cluster">
+              <span class="tech-pill highlight"><span class="status-dot"></span>Android (Java)</span>
+              <span class="tech-pill highlight">Flutter / Dart</span>
+              <span class="tech-pill">CameraX / Overlays</span>
+              <span class="tech-pill">Volley / Picasso</span>
+              <span class="tech-pill">Gradle Kotlin DSL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. IoT & Robotics -->
+        <div class="pillar-card card-3">
+          <div>
+            <div class="card-header">
+              <div class="icon-box">📡</div>
+              <div>
+                <div class="pillar-sub">Hardware &amp; Telemetry</div>
+                <h3 class="pillar-title">IoT Systems</h3>
+              </div>
+            </div>
+            <div class="tags-cluster">
+              <span class="tech-pill highlight"><span class="status-dot"></span>MQTT Broker</span>
+              <span class="tech-pill highlight">Robot Telemetry</span>
+              <span class="tech-pill">Air Quality Sensor</span>
+              <span class="tech-pill">Realtime Signals</span>
+              <span class="tech-pill">Device Remote</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Applied AI & Cloud -->
+        <div class="pillar-card card-4">
+          <div>
+            <div class="card-header">
+              <div class="icon-box">🧠</div>
+              <div>
+                <div class="pillar-sub">Intelligence &amp; Ops</div>
+                <h3 class="pillar-title">AI &amp; Cloud Tooling</h3>
+              </div>
+            </div>
+            <div class="tags-cluster">
+              <span class="tech-pill highlight"><span class="status-dot"></span>Local LLMs (Ollama)</span>
+              <span class="tech-pill highlight">OpenAI API</span>
+              <span class="tech-pill">Railway PaaS</span>
+              <span class="tech-pill">WhiteNoise</span>
+              <span class="tech-pill">Git / CI/CD</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

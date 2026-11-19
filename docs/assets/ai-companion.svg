@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="chassisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="50%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="visorGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#050B14"/>
+      <stop offset="100%" stop-color="#0A1526"/>
+    </linearGradient>
+    <linearGradient id="neonCyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <linearGradient id="plasmaGlow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE" stop-opacity="0.8"/>
+      <stop offset="60%" stop-color="#7F00FF" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7F00FF" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="50%" stop-color="#7F00FF"/>
+      <stop offset="100%" stop-color="#00F5A0"/>
+    </linearGradient>
+
+    <!-- Filters -->
+    <filter id="eyeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="chassisGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    /* Float & Breathing */
+    .bot-assembly {
+      animation: botHover 4.5s ease-in-out infinite alternate;
+      transform-origin: 200px 190px;
+    }
+    @keyframes botHover {
+      0%   { transform: translateY(0px) rotate(0deg); }
+      50%  { transform: translateY(-16px) rotate(1.5deg); }
+      100% { transform: translateY(4px) rotate(-1.5deg); }
+    }
+
+    /* Orbital Rings */
+    .orbital-ring-1 {
+      animation: spinRing1 12s linear infinite;
+      transform-origin: 200px 180px;
+    }
+    .orbital-ring-2 {
+      animation: spinRing2 9s linear infinite reverse;
+      transform-origin: 200px 180px;
+    }
+    @keyframes spinRing1 {
+      0%   { transform: rotate3d(1, 0.4, 0.2, 0deg); }
+      100% { transform: rotate3d(1, 0.4, 0.2, 360deg); }
+    }
+    @keyframes spinRing2 {
+      0%   { transform: rotate3d(0.2, 1, 0.4, 0deg); }
+      100% { transform: rotate3d(0.2, 1, 0.4, 360deg); }
+    }
+
+    /* Thruster Plasma Pulse */
+    .plasma-thruster {
+      animation: thrusterPulse 1.8s ease-in-out infinite alternate;
+      transform-origin: 200px 260px;
+    }
+    @keyframes thrusterPulse {
+      0%   { transform: scaleY(0.8) scaleX(0.9); opacity: 0.6; }
+      100% { transform: scaleY(1.25) scaleX(1.1); opacity: 1; }
+    }
+
+    /* Eye Blinking */
+    .eye {
+      animation: eyeBlink 5s infinite;
+      transform-origin: center;
+    }
+    .eye-left { transform-origin: 165px 175px; }
+    .eye-right { transform-origin: 235px 175px; }
+    @keyframes eyeBlink {
+      0%, 45%, 48%, 95%, 98%, 100% { transform: scaleY(1); }
+      46%, 47%, 96%, 97% { transform: scaleY(0.08); }
+    }
+
+    /* Floating Hands */
+    .hand-left {
+      animation: handFloatLeft 3.8s ease-in-out infinite alternate;
+    }
+    .hand-right {
+      animation: handFloatRight 4.2s ease-in-out infinite alternate-reverse;
+    }
+    @keyframes handFloatLeft {
+      0%   { transform: translate(0, 0); }
+      100% { transform: translate(-6px, -12px); }
+    }
+    @keyframes handFloatRight {
+      0%   { transform: translate(0, 0); }
+      100% { transform: translate(6px, -10px); }
+    }
+
+    /* Antenna Signal Pulse */
+    .antenna-signal {
+      animation: signalPulse 2.2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+      transform-origin: 200px 80px;
+    }
+    @keyframes signalPulse {
+      0%   { r: 4px; opacity: 1; }
+      100% { r: 16px; opacity: 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .bot-assembly, .orbital-ring-1, .orbital-ring-2, .plasma-thruster, .eye, .hand-left, .hand-right, .antenna-signal {
+        animation: none !important;
+      }
+    }
+  </style>
+
+  <!-- Ambient Backdrop Glow -->
+  <circle cx="200" cy="180" r="140" fill="#00F2FE" opacity="0.07" filter="url(#chassisGlow)"/>
+  <circle cx="200" cy="180" r="100" fill="#7F00FF" opacity="0.08" filter="url(#chassisGlow)"/>
+
+  <!-- Rotating Orbital Gyro Rings -->
+  <g class="orbital-ring-1" opacity="0.45">
+    <ellipse cx="200" cy="180" rx="145" ry="48" stroke="url(#ringGrad)" stroke-width="1.8" stroke-dasharray="18 12 40 10"/>
+    <circle cx="345" cy="180" r="3.5" fill="#00F2FE" filter="url(#eyeGlow)"/>
+    <circle cx="55" cy="180" r="2.5" fill="#7F00FF"/>
+  </g>
+  <g class="orbital-ring-2" opacity="0.35">
+    <ellipse cx="200" cy="180" rx="130" ry="60" stroke="#00F5A0" stroke-width="1.2" stroke-dasharray="8 14 24 8"/>
+    <circle cx="200" cy="240" r="3" fill="#00F5A0" filter="url(#eyeGlow)"/>
+  </g>
+
+  <!-- Main Robot Assembly -->
+  <g class="bot-assembly">
+    <!-- Plasma Propulsion Thruster -->
+    <g class="plasma-thruster">
+      <path d="M175 255 Q200 320 225 255 Z" fill="url(#plasmaGlow)"/>
+      <ellipse cx="200" cy="256" rx="22" ry="5" fill="#00F2FE" opacity="0.8" filter="url(#eyeGlow)"/>
+    </g>
+
+    <!-- Antenna & Signal Transmitter -->
+    <line x1="200" y1="110" x2="200" y2="76" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="200" cy="74" r="5" fill="#00F2FE" filter="url(#eyeGlow)"/>
+    <circle cx="200" cy="74" r="4" stroke="#00F2FE" stroke-width="1.5" fill="none" class="antenna-signal"/>
+
+    <!-- Head & Torso Unified Sphere Chassis -->
+    <circle cx="200" cy="180" r="78" fill="url(#chassisGrad)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
+    <!-- Chassis Contour Highlights -->
+    <path d="M135 150 A70 70 0 0 1 265 150" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" fill="none"/>
+    <circle cx="200" cy="180" r="76" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1" fill="none"/>
+
+    <!-- Headphone / Audio Telemetry Sensors (Ears) -->
+    <!-- Left Ear -->
+    <g>
+      <rect x="112" y="155" width="12" height="42" rx="6" fill="#1E293B" stroke="#00F2FE" stroke-width="1.5"/>
+      <circle cx="118" cy="176" r="3" fill="#00F2FE" filter="url(#eyeGlow)"/>
+    </g>
+    <!-- Right Ear -->
+    <g>
+      <rect x="276" y="155" width="12" height="42" rx="6" fill="#1E293B" stroke="#00F2FE" stroke-width="1.5"/>
+      <circle cx="282" cy="176" r="3" fill="#00F2FE" filter="url(#eyeGlow)"/>
+    </g>
+
+    <!-- Holographic Face Visor -->
+    <rect x="138" y="146" width="124" height="64" rx="24" fill="url(#visorGrad)" stroke="rgba(0,242,254,0.5)" stroke-width="1.5"/>
+    <!-- Visor Scanlines -->
+    <line x1="148" y1="158" x2="252" y2="158" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+    <line x1="148" y1="168" x2="252" y2="168" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+    <line x1="148" y1="178" x2="252" y2="178" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+    <line x1="148" y1="188" x2="252" y2="188" stroke="rgba(0,242,254,0.1)" stroke-width="1"/>
+
+    <!-- Expressive AI Eyes -->
+    <!-- Left Eye -->
+    <g class="eye eye-left">
+      <ellipse cx="168" cy="176" rx="14" ry="16" fill="url(#neonCyan)" filter="url(#eyeGlow)"/>
+      <ellipse cx="168" cy="176" rx="9" ry="11" fill="#FFFFFF"/>
+      <circle cx="171" cy="172" r="3" fill="#020617"/>
+    </g>
+    <!-- Right Eye -->
+    <g class="eye eye-right">
+      <ellipse cx="232" cy="176" rx="14" ry="16" fill="url(#neonCyan)" filter="url(#eyeGlow)"/>
+      <ellipse cx="232" cy="176" rx="9" ry="11" fill="#FFFFFF"/>
+      <circle cx="235" cy="172" r="3" fill="#020617"/>
+    </g>
+
+    <!-- Visor Glass Glare -->
+    <path d="M148 154 Q180 148 215 154" stroke="rgba(255,255,255,0.4)" stroke-width="2" stroke-linecap="round" fill="none"/>
+
+    <!-- Chest Core Emblem (Neural AI Core) -->
+    <polygon points="200,224 209,234 200,244 191,234" fill="#0F172A" stroke="#00F2FE" stroke-width="1.5"/>
+    <polygon points="200,227 206,234 200,241 194,234" fill="#00F5A0" filter="url(#eyeGlow)"/>
+
+    <!-- Left Floating Hand -->
+    <g class="hand-left">
+      <rect x="94" y="200" width="22" height="34" rx="10" fill="url(#chassisGrad)" stroke="rgba(0,242,254,0.3)" stroke-width="1.5"/>
+      <circle cx="105" cy="216" r="3" fill="#00F2FE" filter="url(#eyeGlow)"/>
+      <!-- Magnetic Finger Nodes -->
+      <circle cx="98" cy="238" r="2.5" fill="#38BDF8"/>
+      <circle cx="105" cy="241" r="2.5" fill="#38BDF8"/>
+      <circle cx="112" cy="238" r="2.5" fill="#38BDF8"/>
+    </g>
+
+    <!-- Right Floating Hand -->
+    <g class="hand-right">
+      <rect x="284" y="200" width="22" height="34" rx="10" fill="url(#chassisGrad)" stroke="rgba(0,242,254,0.3)" stroke-width="1.5"/>
+      <circle cx="295" cy="216" r="3" fill="#00F2FE" filter="url(#eyeGlow)"/>
+      <!-- Magnetic Finger Nodes -->
+      <circle cx="288" cy="238" r="2.5" fill="#38BDF8"/>
+      <circle cx="295" cy="241" r="2.5" fill="#38BDF8"/>
+      <circle cx="302" cy="238" r="2.5" fill="#38BDF8"/>
+    </g>
+  </g>
+</svg>

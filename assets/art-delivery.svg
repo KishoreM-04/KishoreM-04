@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="deliveryBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070C18"/>
+      <stop offset="100%" stop-color="#03050B"/>
+    </linearGradient>
+    <linearGradient id="deliveryRoute" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38BDF8"/>
+      <stop offset="50%" stop-color="#00F5A0"/>
+      <stop offset="100%" stop-color="#FBBF24"/>
+    </linearGradient>
+    <filter id="delivGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .order-pipeline {
+      stroke-dasharray: 6 10;
+      animation: routePulse 5s linear infinite;
+    }
+    @keyframes routePulse {
+      from { stroke-dashoffset: 64; }
+      to   { stroke-dashoffset: 0; }
+    }
+    .bike-courier {
+      animation: courierMove 7s ease-in-out infinite alternate;
+    }
+    @keyframes courierMove {
+      0%   { transform: translate(250px, 160px); }
+      100% { transform: translate(370px, 160px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .order-pipeline, .bike-courier { animation: none !important; }
+    }
+  </style>
+
+  <!-- Canvas Chassis -->
+  <rect width="600" height="320" rx="14" fill="url(#deliveryBg)" stroke="rgba(56, 189, 248, 0.3)" stroke-width="1.5"/>
+
+  <!-- Connected Pathway -->
+  <path d="M 120 160 L 250 160 L 480 160" stroke="url(#deliveryRoute)" stroke-width="2.5" class="order-pipeline"/>
+
+  <!-- Left: Customer Ordering (Android App) -->
+  <g transform="translate(45, 100)">
+    <rect width="130" height="120" rx="10" fill="#0B1324" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1.5"/>
+    <circle cx="28" cy="28" r="14" fill="#0284C7" opacity="0.3"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">📱</text>
+    <text x="50" y="24" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">CUSTOMER</text>
+    <text x="50" y="36" fill="#38BDF8" font-family="sans-serif" font-size="8.5" font-weight="600">Android Client</text>
+    
+    <g transform="translate(14, 52)">
+      <text fill="#E2E8F0" font-family="sans-serif" font-size="9" font-weight="600">🛒 Cart Engine (Picasso)</text>
+      <text y="14" fill="#94A3B8" font-family="sans-serif" font-size="8.5">Realtime Item Tally</text>
+      <rect y="22" width="102" height="18" rx="4" fill="rgba(0,242,254,0.12)" stroke="rgba(0,242,254,0.3)" stroke-width="1"/>
+      <text x="8" y="34" fill="#00F2FE" font-family="sans-serif" font-size="8.5" font-weight="700">ORDER DISPATCHED</text>
+    </g>
+  </g>
+
+  <!-- Center: Restaurant & Inventory Fulfillment (Django Backend) -->
+  <g transform="translate(235, 35)">
+    <rect width="130" height="85" rx="10" fill="#0F172A" stroke="rgba(0, 245, 160, 0.4)" stroke-width="1.5"/>
+    <circle cx="28" cy="26" r="14" fill="#047857" opacity="0.3"/>
+    <text x="28" y="31" text-anchor="middle" font-size="14">🏪</text>
+    <text x="50" y="22" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">RESTAURANT</text>
+    <text x="50" y="34" fill="#00F5A0" font-family="sans-serif" font-size="8.5" font-weight="600">Django Web Portal</text>
+    <text x="14" y="58" fill="#E2E8F0" font-family="sans-serif" font-size="9">📦 Live Inventory CRUD</text>
+    <text x="14" y="70" fill="#64748B" font-family="sans-serif" font-size="8.5">MySQL Order Verification</text>
+  </g>
+
+  <!-- Courier Transit Node -->
+  <g class="bike-courier">
+    <circle cx="0" cy="0" r="16" fill="#0F172A" stroke="#00F5A0" stroke-width="2"/>
+    <text x="0" y="4" text-anchor="middle" font-size="12">🛵</text>
+  </g>
+
+  <!-- Right: Delivery Partner & Real-Time Tracking -->
+  <g transform="translate(425, 100)">
+    <rect width="130" height="120" rx="10" fill="#0B1324" stroke="rgba(251, 191, 36, 0.4)" stroke-width="1.5"/>
+    <circle cx="28" cy="28" r="14" fill="#B45309" opacity="0.3"/>
+    <text x="28" y="33" text-anchor="middle" font-size="14">📍</text>
+    <text x="50" y="24" fill="#FFFFFF" font-family="sans-serif" font-size="11" font-weight="700">DELIVERY</text>
+    <text x="50" y="36" fill="#FBBF24" font-family="sans-serif" font-size="8.5" font-weight="600">Live GPS Transit</text>
+    
+    <g transform="translate(14, 52)">
+      <text fill="#E2E8F0" font-family="sans-serif" font-size="9" font-weight="600">⚡ Status: Out for Delivery</text>
+      <text y="14" fill="#94A3B8" font-family="sans-serif" font-size="8.5">ETA: 8 mins · Tracked</text>
+      <rect y="22" width="102" height="18" rx="4" fill="rgba(251,191,36,0.12)" stroke="rgba(251,191,36,0.3)" stroke-width="1"/>
+      <text x="8" y="34" fill="#FBBF24" font-family="sans-serif" font-size="8.5" font-weight="700">FULFILLMENT OK</text>
+    </g>
+  </g>
+
+  <!-- Footer Specification Line -->
+  <text x="300" y="285" text-anchor="middle" fill="#64748B" font-family="-apple-system, sans-serif" font-size="10.5">
+    Dual Platform Ecosystem · Django REST Backend · Android Java Client with Picasso Caching
+  </text>
+</svg>

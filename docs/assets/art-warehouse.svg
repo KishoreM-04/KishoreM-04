@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 320" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="medBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#040D18"/>
+      <stop offset="100%" stop-color="#02060D"/>
+    </linearGradient>
+    <linearGradient id="cyanLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00F2FE"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
+    </linearGradient>
+    <filter id="medGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <style>
+    .med-scan {
+      animation: medScanPulse 3.5s ease-in-out infinite alternate;
+    }
+    @keyframes medScanPulse {
+      0%   { opacity: 0.3; }
+      100% { opacity: 0.9; filter: drop-shadow(0 0 6px rgba(0, 242, 254, 0.5)); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .med-scan { animation: none !important; }
+    }
+  </style>
+
+  <!-- Clean Medical Cyber Chassis -->
+  <rect width="600" height="320" rx="14" fill="url(#medBg)" stroke="rgba(0, 242, 254, 0.3)" stroke-width="1.5"/>
+
+  <!-- Sterile Tech Grid -->
+  <g opacity="0.08" stroke="#00F2FE" stroke-width="0.75">
+    <line x1="0" y1="80" x2="600" y2="80"/>
+    <line x1="0" y1="160" x2="600" y2="160"/>
+    <line x1="0" y1="240" x2="600" y2="240"/>
+    <line x1="200" y1="0" x2="200" y2="320"/>
+    <line x1="400" y1="0" x2="400" y2="320"/>
+  </g>
+
+  <!-- Left: Medical Equipment Inventory Racks -->
+  <g transform="translate(45, 60)">
+    <rect width="150" height="190" rx="10" fill="#071324" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1.5"/>
+    <text x="16" y="24" fill="#00F2FE" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">🏥 EQUIPMENT DEPOT</text>
+    <text x="16" y="38" fill="#64748B" font-family="sans-serif" font-size="8.5">Categorized Inventory Racks</text>
+
+    <!-- Item 1: Ventilators & Critical -->
+    <g transform="translate(14, 52)">
+      <rect width="122" height="34" rx="6" fill="#0C1B33" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="10" y="15" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="600">Ventilator Systems</text>
+      <text x="10" y="26" fill="#00F5A0" font-family="sans-serif" font-size="8">Stock: 24 units · Optimal</text>
+      <circle cx="110" cy="17" r="3.5" fill="#00F5A0"/>
+    </g>
+
+    <!-- Item 2: Defibrillators & Monitors -->
+    <g transform="translate(14, 94)">
+      <rect width="122" height="34" rx="6" fill="#0C1B33" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="10" y="15" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="600">Cardiac Monitors</text>
+      <text x="10" y="26" fill="#38BDF8" font-family="sans-serif" font-size="8">Stock: 48 units · Verified</text>
+      <circle cx="110" cy="17" r="3.5" fill="#38BDF8"/>
+    </g>
+
+    <!-- Item 3: Surgical Tools -->
+    <g transform="translate(14, 136)">
+      <rect width="122" height="34" rx="6" fill="#0C1B33" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="10" y="15" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="600">Sterile Surgical Packs</text>
+      <text x="10" y="26" fill="#FBBF24" font-family="sans-serif" font-size="8">Stock: 12 units · Reorder</text>
+      <circle cx="110" cy="17" r="3.5" fill="#FBBF24"/>
+    </g>
+  </g>
+
+  <!-- Center: Warehouse Database & Stock Depletion Engine -->
+  <g transform="translate(230, 85)">
+    <rect width="140" height="140" rx="10" fill="#091426" stroke="#00F2FE" stroke-width="2" class="med-scan"/>
+    <text x="70" y="26" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="11.5" font-weight="800">CENTRAL DB</text>
+    <text x="70" y="39" text-anchor="middle" fill="#00F2FE" font-family="sans-serif" font-size="8.5" font-weight="600">MySQL Warehouse Core</text>
+
+    <!-- Medical Cross Hologram -->
+    <g transform="translate(70, 75)">
+      <rect x="-6" y="-18" width="12" height="36" rx="2" fill="#00F5A0"/>
+      <rect x="-18" y="-6" width="36" height="12" rx="2" fill="#00F5A0"/>
+      <circle r="22" stroke="rgba(0, 245, 160, 0.4)" stroke-width="1.5" fill="none"/>
+    </g>
+
+    <text x="70" y="122" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="8.5">PHP Relational Engine</text>
+  </g>
+
+  <!-- Right: Hospital Branch Order Dispatch & Confirmation -->
+  <g transform="translate(405, 60)">
+    <rect width="150" height="190" rx="10" fill="#071324" stroke="rgba(0, 245, 160, 0.4)" stroke-width="1.5"/>
+    <text x="16" y="24" fill="#00F5A0" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">📦 REQUISITION</text>
+    <text x="16" y="38" fill="#64748B" font-family="sans-serif" font-size="8.5">Hospital Branch Fulfillment</text>
+
+    <!-- Branch Order Card -->
+    <g transform="translate(14, 52)">
+      <rect width="122" height="56" rx="6" fill="#0C1B33" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="10" y="16" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="600">Branch: City Clinic</text>
+      <text x="10" y="28" fill="#94A3B8" font-family="sans-serif" font-size="8">Order: #MED-8491</text>
+      <rect x="10" y="34" width="70" height="14" rx="3" fill="rgba(0,245,160,0.15)"/>
+      <text x="14" y="44" fill="#00F5A0" font-family="sans-serif" font-size="7.5" font-weight="700">CONFIRMED</text>
+    </g>
+
+    <!-- Stock Dispatch Route -->
+    <g transform="translate(14, 118)">
+      <rect width="122" height="52" rx="6" fill="#0C1B33" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <text x="10" y="16" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="600">Dispatch Logistics</text>
+      <text x="10" y="28" fill="#94A3B8" font-family="sans-serif" font-size="8">Status: In Transit</text>
+      <text x="10" y="40" fill="#38BDF8" font-family="sans-serif" font-size="8">ETA: 45 Mins · Branch A</text>
+    </g>
+  </g>
+
+  <!-- Footer Tagline -->
+  <text x="300" y="295" text-anchor="middle" fill="#64748B" font-family="-apple-system, sans-serif" font-size="10.5">
+    Multi-Branch Medical Inventory Logistics · PHP &amp; MySQL Relational Architecture
+  </text>
+</svg>
