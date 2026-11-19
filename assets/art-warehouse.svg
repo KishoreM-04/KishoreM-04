@@ -45,7 +45,7 @@
     <text x="16" y="24" fill="#00F2FE" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">🏥 EQUIPMENT DEPOT</text>
     <text x="16" y="38" fill="#64748B" font-family="sans-serif" font-size="8.5">Categorized Inventory Racks</text>
 
-    <!-- Item 1: Ventilators & Critical -->
+    <!-- Item 1: Ventilators and Critical -->
     <g transform="translate(14, 52)">
       <rect width="122" height="34" rx="6" fill="#0C1B33" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
       <text x="10" y="15" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="600">Ventilator Systems</text>
@@ -53,7 +53,7 @@
       <circle cx="110" cy="17" r="3.5" fill="#00F5A0"/>
     </g>
 
-    <!-- Item 2: Defibrillators & Monitors -->
+    <!-- Item 2: Defibrillators and Monitors -->
     <g transform="translate(14, 94)">
       <rect width="122" height="34" rx="6" fill="#0C1B33" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
       <text x="10" y="15" fill="#FFFFFF" font-family="sans-serif" font-size="9" font-weight="600">Cardiac Monitors</text>
@@ -70,7 +70,7 @@
     </g>
   </g>
 
-  <!-- Center: Warehouse Database & Stock Depletion Engine -->
+  <!-- Center: Warehouse Database and Stock Depletion Engine -->
   <g transform="translate(230, 85)">
     <rect width="140" height="140" rx="10" fill="#091426" stroke="#00F2FE" stroke-width="2" class="med-scan"/>
     <text x="70" y="26" text-anchor="middle" fill="#FFFFFF" font-family="sans-serif" font-size="11.5" font-weight="800">CENTRAL DB</text>
@@ -86,7 +86,7 @@
     <text x="70" y="122" text-anchor="middle" fill="#94A3B8" font-family="sans-serif" font-size="8.5">PHP Relational Engine</text>
   </g>
 
-  <!-- Right: Hospital Branch Order Dispatch & Confirmation -->
+  <!-- Right: Hospital Branch Order Dispatch and Confirmation -->
   <g transform="translate(405, 60)">
     <rect width="150" height="190" rx="10" fill="#071324" stroke="rgba(0, 245, 160, 0.4)" stroke-width="1.5"/>
     <text x="16" y="24" fill="#00F5A0" font-family="-apple-system, sans-serif" font-size="11" font-weight="700">📦 REQUISITION</text>

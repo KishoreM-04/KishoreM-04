@@ -94,14 +94,14 @@
     <text x="14" y="73" fill="#38BDF8" font-size="8" font-family="sans-serif">● Guidance Logs</text>
   </g>
 
-  <!-- Top: HOD & Institutional Governance -->
+  <!-- Top: HOD and Institutional Governance -->
   <g transform="translate(230, 25)">
     <rect width="140" height="50" rx="8" fill="#090E1A" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1"/>
     <text x="18" y="22" class="node-title">🏛️ HOD GOVERNANCE</text>
     <text x="18" y="38" class="node-sub">Department Analytics &amp; Audits</text>
   </g>
 
-  <!-- Bottom: Local AI & ReportLab Telemetry -->
+  <!-- Bottom: Local AI and ReportLab Telemetry -->
   <g transform="translate(210, 245)">
     <rect width="180" height="52" rx="8" fill="#090E1A" stroke="rgba(0, 245, 160, 0.3)" stroke-width="1"/>
     <text x="16" y="22" fill="#00F5A0" font-family="sans-serif" font-size="10.5" font-weight="700">🧠 OLLAMA LOCAL AI + PDF</text>

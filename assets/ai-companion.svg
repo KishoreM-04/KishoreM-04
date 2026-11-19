@@ -37,7 +37,7 @@
   </defs>
 
   <style>
-    /* Float & Breathing */
+    /* Float and Breathing */
     .bot-assembly {
       animation: botHover 4.5s ease-in-out infinite alternate;
       transform-origin: 200px 190px;
@@ -144,12 +144,12 @@
       <ellipse cx="200" cy="256" rx="22" ry="5" fill="#00F2FE" opacity="0.8" filter="url(#eyeGlow)"/>
     </g>
 
-    <!-- Antenna & Signal Transmitter -->
+    <!-- Antenna and Signal Transmitter -->
     <line x1="200" y1="110" x2="200" y2="76" stroke="#475569" stroke-width="3" stroke-linecap="round"/>
     <circle cx="200" cy="74" r="5" fill="#00F2FE" filter="url(#eyeGlow)"/>
     <circle cx="200" cy="74" r="4" stroke="#00F2FE" stroke-width="1.5" fill="none" class="antenna-signal"/>
 
-    <!-- Head & Torso Unified Sphere Chassis -->
+    <!-- Head and Torso Unified Sphere Chassis -->
     <circle cx="200" cy="180" r="78" fill="url(#chassisGrad)" stroke="rgba(255,255,255,0.18)" stroke-width="2"/>
     <!-- Chassis Contour Highlights -->
     <path d="M135 150 A70 70 0 0 1 265 150" stroke="rgba(255,255,255,0.22)" stroke-width="1.5" fill="none"/>

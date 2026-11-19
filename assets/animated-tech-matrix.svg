@@ -74,7 +74,7 @@
     <rect width="198" height="156" rx="10" fill="url(#colCyan)" stroke="rgba(0, 242, 254, 0.35)" stroke-width="1.2"/>
     <line x1="12" y1="0" x2="186" y2="0" stroke="#00F2FE" stroke-width="2" class="scan-beam"/>
 
-    <!-- Icon & Title -->
+    <!-- Icon and Title -->
     <rect x="14" y="14" width="28" height="28" rx="6" fill="#040D1B" stroke="#00F2FE" stroke-width="1"/>
     <text x="28" y="33" text-anchor="middle" font-size="14">⚡</text>
     <text x="50" y="26" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">BACKEND</text>
@@ -114,7 +114,7 @@
     <rect width="198" height="156" rx="10" fill="url(#colBlue)" stroke="rgba(56, 189, 248, 0.35)" stroke-width="1.2"/>
     <line x1="12" y1="0" x2="186" y2="0" stroke="#38BDF8" stroke-width="2" class="scan-beam"/>
 
-    <!-- Icon & Title -->
+    <!-- Icon and Title -->
     <rect x="14" y="14" width="28" height="28" rx="6" fill="#051325" stroke="#38BDF8" stroke-width="1"/>
     <text x="28" y="33" text-anchor="middle" font-size="14">🗄️</text>
     <text x="50" y="26" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">DATABASES</text>
@@ -140,12 +140,12 @@
     </g>
   </g>
 
-  <!-- ==================== PILLAR 3: MOBILE & IOT ==================== -->
+  <!-- ==================== PILLAR 3: MOBILE and IOT ==================== -->
   <g transform="translate(448, 54)">
     <rect width="198" height="156" rx="10" fill="url(#colGreen)" stroke="rgba(0, 245, 160, 0.35)" stroke-width="1.2"/>
     <line x1="12" y1="0" x2="186" y2="0" stroke="#00F5A0" stroke-width="2" class="scan-beam"/>
 
-    <!-- Icon & Title -->
+    <!-- Icon and Title -->
     <rect x="14" y="14" width="28" height="28" rx="6" fill="#041B15" stroke="#00F5A0" stroke-width="1"/>
     <text x="28" y="33" text-anchor="middle" font-size="14">📡</text>
     <text x="50" y="26" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">MOBILE &amp; IOT</text>
@@ -171,12 +171,12 @@
     </g>
   </g>
 
-  <!-- ==================== PILLAR 4: AI & CLOUD DEVOPS ==================== -->
+  <!-- ==================== PILLAR 4: AI and CLOUD DEVOPS ==================== -->
   <g transform="translate(660, 54)">
     <rect width="196" height="156" rx="10" fill="url(#colPurple)" stroke="rgba(192, 132, 252, 0.35)" stroke-width="1.2"/>
     <line x1="12" y1="0" x2="184" y2="0" stroke="#C084FC" stroke-width="2" class="scan-beam"/>
 
-    <!-- Icon & Title -->
+    <!-- Icon and Title -->
     <rect x="14" y="14" width="28" height="28" rx="6" fill="#180A2E" stroke="#C084FC" stroke-width="1"/>
     <text x="28" y="33" text-anchor="middle" font-size="14">🤖</text>
     <text x="50" y="26" fill="#FFFFFF" class="sans" font-size="12" font-weight="700">AI &amp; CLOUD</text>

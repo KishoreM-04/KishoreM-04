@@ -58,7 +58,7 @@
     </g>
   </g>
 
-  <!-- Center: Restaurant & Inventory Fulfillment (Django Backend) -->
+  <!-- Center: Restaurant and Inventory Fulfillment (Django Backend) -->
   <g transform="translate(235, 35)">
     <rect width="130" height="85" rx="10" fill="#0F172A" stroke="rgba(0, 245, 160, 0.4)" stroke-width="1.5"/>
     <circle cx="28" cy="26" r="14" fill="#047857" opacity="0.3"/>
@@ -75,7 +75,7 @@
     <text x="0" y="4" text-anchor="middle" font-size="12">🛵</text>
   </g>
 
-  <!-- Right: Delivery Partner & Real-Time Tracking -->
+  <!-- Right: Delivery Partner and Real-Time Tracking -->
   <g transform="translate(425, 100)">
     <rect width="130" height="120" rx="10" fill="#0B1324" stroke="rgba(251, 191, 36, 0.4)" stroke-width="1.5"/>
     <circle cx="28" cy="28" r="14" fill="#B45309" opacity="0.3"/>
