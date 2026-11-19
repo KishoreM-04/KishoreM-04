@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kishore M · Systems & Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Kishore M — MCA candidate, Full-Stack Django Engineer, Android & IoT Systems Developer, and AI Tooling Specialist.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <!-- Ambient Glow Orbs -->
+  <div class="glow-orb orb-top-right"></div>
+  <div class="glow-orb orb-mid-left"></div>
+  <div class="glow-orb orb-bottom-right"></div>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-brand">
+        <span class="brand-monogram">KM</span>
+        <span class="brand-text">Kishore<span class="brand-dot">.</span>M</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#mentrix" class="nav-link">Mentrix <span class="nav-flag-pill">Flagship</span></a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#activity" class="nav-link">Activity</a>
+        <a href="#contact" class="nav-link nav-cta">Get in Touch</a>
+      </nav>
+
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-content">
+        <div class="status-badge-wrapper fade-in">
+          <span class="status-indicator-ring">
+            <span class="status-dot"></span>
+          </span>
+          <span class="status-text">Available for Software Engineering Roles</span>
+        </div>
+
+        <h1 class="hero-title fade-in delay-1">
+          Architecting <span class="gradient-text cyan-purple">Enterprise Platforms</span>,<br>
+          <span class="gradient-text purple-emerald">IoT Telemetry</span> &amp; Modern Systems.
+        </h1>
+
+        <p class="hero-subtitle fade-in delay-2">
+          Hi, I'm <strong class="text-white">Kishore M</strong> — an MCA candidate at Rajagiri College of Social Sciences, Kerala. I specialize in building mission-critical Django backends, native Android applications, IoT hardware telemetry systems, and practical AI integrations.
+        </p>
+
+        <div class="hero-actions fade-in delay-3">
+          <a href="#projects" class="btn btn-primary">
+            <span>Explore 8 Featured Projects</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="#mentrix" class="btn btn-secondary">
+            <span>Mentrix Case Study</span>
+            <span class="pill-spark">⭐</span>
+          </a>
+          <a href="https://github.com/KishoreM-04" target="_blank" rel="noopener" class="btn btn-ghost" title="GitHub Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/kishorem2004" target="_blank" rel="noopener" class="btn btn-ghost" title="LinkedIn Profile">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+            LinkedIn
+          </a>
+        </div>
+
+        <!-- Quick Metrics Grid -->
+        <div class="hero-metrics-grid fade-in delay-4">
+          <div class="metric-card">
+            <div class="metric-num">8+</div>
+            <div class="metric-label">Engineered Projects</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">5+</div>
+            <div class="metric-label">Core Roles in Mentrix</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">MCA</div>
+            <div class="metric-label">Rajagiri Social Sciences</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-num">100%</div>
+            <div class="metric-label">Open Source &amp; Verified</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-tag">BACKGROUND &amp; PHILOSOPHY</div>
+        <h2 class="section-title">Bridging Full-Stack Scale, Mobile Systems &amp; Hardware Telemetry</h2>
+
+        <div class="about-grid">
+          <div class="about-card main-bio">
+            <h3>Engineering With Practical Impact</h3>
+            <p>
+              I am a computer science postgraduate scholar pursuing my <strong>Master of Computer Applications (MCA)</strong> at Rajagiri College of Social Sciences, Kalamassery. My journey revolves around building reliable software that bridges backend web architectures, mobile client interfaces, and real-time physical device signals.
+            </p>
+            <p>
+              Whether engineering the multi-tenant architecture of <strong>Mentrix</strong> with role switching and local LLM pipelines, writing low-latency hardware telemetry apps for autonomous air-purifying robots (<strong>EcoBreath / PuriBot</strong>), or designing production task managers with Railway PaaS (<strong>TaskFlow</strong>), I focus on clean abstraction, secure access controls, and performant code.
+            </p>
+            <div class="academic-chip">
+              <span class="chip-icon">🏛️</span>
+              <div>
+                <strong>Rajagiri College of Social Sciences</strong>
+                <div>Master of Computer Applications (MCA) · Kalamassery, Kerala</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card timeline-card">
+            <h3>Key Technical Milestones</h3>
+            <ul class="timeline-list">
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2026</span>
+                  <h4>Mentrix Multi-Tenant Platform &amp; Local AI</h4>
+                  <p>Designed institutional mentor–mentee governance, Google OAuth domain locks, and on-premise Ollama AI inference.</p>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2025–2026</span>
+                  <h4>IoT Robotics &amp; Mobile Client Telemetry</h4>
+                  <p>Engineered EcoBreath PuriBot controller and dual mobile-to-cloud food delivery ecosystems.</p>
+                </div>
+              </li>
+              <li class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content">
+                  <span class="timeline-date">2024–2025</span>
+                  <h4>Event Systems &amp; Logistics Platforms</h4>
+                  <p>Built Splendore camera overlay app, Dignito fest manager, and Medical Warehouse supply chain.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-tag">TECHNICAL COMPETENCIES</div>
+        <h2 class="section-title">The Engineering Toolkit</h2>
+        <p class="section-subtitle">Categorized competencies spanning backend, mobile, IoT, data, and intelligent tooling.</p>
+
+        <div class="skills-grid">
+          <!-- Backend & Architecture -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <span class="category-icon">⚡</span>
+              <div>
+                <h3>Backend &amp; Systems</h3>
+                <span class="category-sub">Production Web Core</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill">Python 3.11</span>
+              <span class="skill-pill highlight">Django 5.x</span>
+              <span class="skill-pill">PostgreSQL</span>
+              <span class="skill-pill">MySQL</span>
+              <span class="skill-pill">PHP</span>
+              <span class="skill-pill">REST APIs</span>
+              <span class="skill-pill">Gunicorn</span>
+              <span class="skill-pill">WhiteNoise</span>
+              <span class="skill-pill">Role-Based Access (RBAC)</span>
+            </div>
+          </div>
+
+          <!-- Mobile & Cross-Platform -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <span class="category-icon">📱</span>
+              <div>
+                <h3>Mobile Engineering</h3>
+                <span class="category-sub">Native &amp; Cross-Platform</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill highlight">Android (Java)</span>
+              <span class="skill-pill highlight">Flutter / Dart</span>
+              <span class="skill-pill">Camera API / Overlays</span>
+              <span class="skill-pill">Picasso &amp; Volley</span>
+              <span class="skill-pill">Gradle Kotlin DSL</span>
+              <span class="skill-pill">APK Compilation</span>
+              <span class="skill-pill">Material Design 3</span>
+            </div>
+          </div>
+
+          <!-- IoT & Hardware Signals -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <span class="category-icon">📡</span>
+              <div>
+                <h3>IoT &amp; Hardware Telemetry</h3>
+                <span class="category-sub">Sensors &amp; Actuators</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill highlight">MQTT Protocols</span>
+              <span class="skill-pill">Robot Telemetry</span>
+              <span class="skill-pill">Air Quality Sensors</span>
+              <span class="skill-pill">Hardware State UI</span>
+              <span class="skill-pill">Directional Drive Signals</span>
+              <span class="skill-pill">Bluetooth Comm</span>
+            </div>
+          </div>
+
+          <!-- Applied AI & Cloud Tooling -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <span class="category-icon">🧠</span>
+              <div>
+                <h3>AI &amp; Cloud Tooling</h3>
+                <span class="category-sub">Intelligence &amp; Deployment</span>
+              </div>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-pill highlight">Local LLMs (Ollama)</span>
+              <span class="skill-pill">OpenAI API</span>
+              <span class="skill-pill">Prompt Engineering</span>
+              <span class="skill-pill">Railway PaaS</span>
+              <span class="skill-pill">Git / GitHub Actions</span>
+              <span class="skill-pill">ReportLab PDF</span>
+              <span class="skill-pill">HTML5 / CSS3 / Vanilla JS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mentrix Flagship Spotlight -->
+    <section class="section mentrix-section" id="mentrix">
+      <div class="container">
+        <div class="flagship-badge">
+          <span>⭐ FLAGSHIP CASE STUDY</span>
+        </div>
+        <h2 class="section-title">Mentrix — Institutional Mentor–Mentee Ecosystem</h2>
+        <p class="section-subtitle">
+          An enterprise Django platform engineered to streamline multi-stakeholder mentoring workflows, enforce institutional governance, and embed on-premise AI intelligence.
+        </p>
+
+        <div class="mentrix-layout">
+          <div class="mentrix-main-card">
+            <div class="mentrix-card-header">
+              <div class="mentrix-badge-row">
+                <span class="status-pill-green">Production Architecture</span>
+                <span class="status-pill-blue">Django 4.2+ / Python</span>
+                <span class="status-pill-purple">Ollama Local LLM</span>
+              </div>
+              <h3>Multi-Tenant Governance &amp; Telemetry</h3>
+              <p>
+                Mentrix resolves the coordination and documentation challenges faced by academic institutions by orchestrating 5 dedicated user roles into a single secure platform.
+              </p>
+            </div>
+
+            <!-- Role Matrix -->
+            <div class="role-grid">
+              <div class="role-card">
+                <div class="role-icon">🎓</div>
+                <h4>Student Portal</h4>
+                <p>Browse mentor availability, request sessions, submit feedback, and view progression dossiers.</p>
+              </div>
+              <div class="role-card">
+                <div class="role-icon">👨‍🏫</div>
+                <h4>Faculty Portal</h4>
+                <p>Schedule slots, record meeting notes, assign guidance milestones, and log mentee evaluations.</p>
+              </div>
+              <div class="role-card">
+                <div class="role-icon">🏛️</div>
+                <h4>HOD Governance</h4>
+                <p>Department-wide overview, mentor-mentee allocation reviews, and compliance reporting.</p>
+              </div>
+              <div class="role-card">
+                <div class="role-icon">🛡️</div>
+                <h4>Admin &amp; Security</h4>
+                <p>Dynamic role-switching engine, single-session concurrency guards, and user lifecycle management.</p>
+              </div>
+            </div>
+
+            <!-- Architecture Innovations -->
+            <div class="mentrix-innovations">
+              <h4>Security &amp; Engineering Innovations</h4>
+              <div class="innovations-grid">
+                <div class="innov-item">
+                  <span class="innov-dot"></span>
+                  <div>
+                    <strong>Domain-Restricted Google OAuth2:</strong> Enforces login exclusivity to institutional domains, preventing external unauthorized authentication attempts.
+                  </div>
+                </div>
+                <div class="innov-item">
+                  <span class="innov-dot"></span>
+                  <div>
+                    <strong>Single-Session Concurrency Guard:</strong> Custom middleware invalidates duplicate sessions upon new login events, neutralizing credential sharing.
+                  </div>
+                </div>
+                <div class="innov-item">
+                  <span class="innov-dot"></span>
+                  <div>
+                    <strong>On-Premise Local AI (Ollama):</strong> Secure local LLM pipeline to analyze mentoring conversation notes and produce actionable sentiment telemetry without leaking institutional records to cloud APIs.
+                  </div>
+                </div>
+                <div class="innov-item">
+                  <span class="innov-dot"></span>
+                  <div>
+                    <strong>Automated PDF Telemetry (ReportLab):</strong> Generates multi-page formatted student mentoring transcripts and departmental reports on demand.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Grid (All 8 Selected Projects) -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-tag">ENGINEERING PORTFOLIO</div>
+        <h2 class="section-title">8 Featured Projects</h2>
+        <p class="section-subtitle">Full-stack web applications, native Android controllers, IoT systems, and cross-platform tools.</p>
+
+        <!-- Category Filter Buttons -->
+        <div class="project-filter-bar">
+          <button class="filter-btn active" data-filter="all">All Projects (8)</button>
+          <button class="filter-btn" data-filter="fullstack">Full-Stack &amp; Web</button>
+          <button class="filter-btn" data-filter="mobile-iot">Mobile &amp; IoT</button>
+          <button class="filter-btn" data-filter="ai-tools">AI &amp; Utilities</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- 1. Mentrix -->
+          <div class="project-card" data-category="fullstack">
+            <div class="card-glow"></div>
+            <div class="project-header">
+              <span class="category-badge cyan">Flagship Platform</span>
+              <span class="badge-role">Django · AI · RBAC</span>
+            </div>
+            <h3 class="project-title">Mentrix Ecosystem</h3>
+            <p class="project-desc">
+              Multi-tenant institutional mentor–mentee governance system with role switching, domain Google OAuth, local Ollama AI integration, and ReportLab PDF dossiers.
+            </p>
+            <div class="project-tags">
+              <span>Django</span>
+              <span>Python</span>
+              <span>Local Ollama</span>
+              <span>Google OAuth</span>
+              <span>ReportLab</span>
+            </div>
+            <div class="project-footer">
+              <a href="#mentrix" class="project-link">
+                <span>View Case Study</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 2. Integrated Food & Grocery Delivery Ecosystem -->
+          <div class="project-card" data-category="fullstack mobile-iot">
+            <div class="card-glow"></div>
+            <div class="project-header">
+              <span class="category-badge emerald">Dual Ecosystem</span>
+              <span class="badge-role">Android + Django Web</span>
+            </div>
+            <h3 class="project-title">Integrated Food &amp; Grocery Delivery</h3>
+            <p class="project-desc">
+              Complete dual-tier commerce system: a Django web portal for merchant catalog &amp; admin order management, paired with a native Android Java client with Picasso image caching and dynamic cart.
+            </p>
+            <div class="project-tags">
+              <span>Android (Java)</span>
+              <span>Django Backend</span>
+              <span>REST APIs</span>
+              <span>Picasso</span>
+              <span>MySQL</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/KishoreM-04/Integrated-Food-Grocery-Delivery-App" target="_blank" rel="noopener" class="project-link">
+                <span>Android App Repo</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="https://github.com/KishoreM-04/Integrated-Food-Grocery-Delivery-Web" target="_blank" rel="noopener" class="project-link secondary">
+                <span>Web Portal</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- 3. Remote Control for Air-Purifying Robot -->
+          <div class="project-card" data-category="mobile-iot">
+            <div class="card-glow"></div>
+            <div class="project-header">
+              <span class="category-badge cyan">IoT &amp; Robotics</span>
+              <span class="badge-role">EcoBreath · PuriBot</span>
+            </div>
+            <h3 class="project-title">Air-Purifying Robot Controller</h3>
+            <p class="project-desc">
+              Native Android telemetry application designed to monitor and remotely drive an autonomous air-purifying robot. Features bidirectional signals, sensor displays, and release APK.
+            </p>
+            <div class="project-tags">
+              <span>Android (Java)</span>
+              <span>IoT Telemetry</span>
+              <span>MQTT Signals</span>
+              <span>Hardware UI</span>
+              <span>Release APK</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/KishoreM-04/Remote-Control-for-Air-Purifying-Robot" target="_blank" rel="noopener" class="project-link">
+                <span>View Repository</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 4. TaskFlow -->
+          <div class="project-card" data-category="fullstack">
+            <div class="card-glow"></div>
+            <div class="project-header">
+              <span class="category-badge emerald">Cloud Full-Stack</span>
+              <span class="badge-role">Django 5.1 · Railway</span>
+            </div>
+            <h3 class="project-title">TaskFlow Task Hub</h3>
+            <p class="project-desc">
+              Production-ready task management engine with user authentication, priority matrix, live metrics dashboard, asynchronous AJAX status toggling, and pre-configured Railway PaaS deployment.
+            </p>
+            <div class="project-tags">
+              <span>Django 5.1</span>
+              <span>Python 3.11</span>
+              <span>Railway PaaS</span>
+              <span>WhiteNoise</span>
+              <span>AJAX</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/KishoreM-04/TaskFlow" target="_blank" rel="noopener" class="project-link">
+                <span>View Repository</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 5. Medical Equipment Warehouse Management System -->
+          <div class="project-card" data-category="fullstack">
+            <div class="card-glow"></div>
+            <div class="project-header">
+              <span class="category-badge amber">Logistics Engine</span>
+              <span class="badge-role">PHP · MySQL</span>
+            </div>
+            <h3 class="project-title">Medical Equipment Warehouse</h3>
+            <p class="project-desc">
+              UG Mini-Project engineered to manage medical equipment inventories, hospital branch stock requisitions, dispatch confirmations, and database-backed inventory audits.
+            </p>
+            <div class="project-tags">
+              <span>PHP</span>
+              <span>MySQL</span>
+              <span>Inventory Schema</span>
+              <span>Branch Logistics</span>
+              <span>Cart Flows</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/KishoreM-04/Medical-Equipment-Warehouse-Management-System" target="_blank" rel="noopener" class="project-link">
+                <span>View Repository</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 6. Splendore 2025 Photo Booth -->
+          <div class="project-card" data-category="mobile-iot">
+            <div class="card-glow"></div>
+            <div class="project-header">
+              <span class="category-badge purple">Android Event Tech</span>
+              <span class="badge-role">Java · Camera API</span>
+            </div>
+            <h3 class="project-title">Splendore Photo Booth</h3>
+            <p class="project-desc">
+              Custom native Android camera application designed for the Splendore Intercollege Fest. Features custom circular photo-booth frame previews, festive branded overlays, and a compiled release APK.
+            </p>
+            <div class="project-tags">
+              <span>Android (Java)</span>
+              <span>Camera API</span>
+              <span>Dynamic Overlays</span>
+              <span>Event Branding</span>
+              <span>Release APK</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/KishoreM-04/Splendore_2025-Photo-Booth" target="_blank" rel="noopener" class="project-link">
+                <span>View Repository</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 7. Dignito Fest Management App -->
+          <div class="project-card" data-category="mobile-iot">
+            <div class="card-glow"></div>
+            <div class="project-header">
+              <span class="category-badge purple">Cross-Platform</span>
+              <span class="badge-role">Flutter · Dart</span>
+            </div>
+            <h3 class="project-title">Dignito Fest Operations App</h3>
+            <p class="project-desc">
+              Cross-platform mobile application built with Flutter to coordinate event listings, attendee registration flows, and live schedule timelines for the Dignito college festival.
+            </p>
+            <div class="project-tags">
+              <span>Flutter</span>
+              <span>Dart</span>
+              <span>Material Design 3</span>
+              <span>Event Logistics</span>
+              <span>UI Animations</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/KishoreM-04/Dignito-Fest-Management-App" target="_blank" rel="noopener" class="project-link">
+                <span>View Repository</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- 8. GPT Helper App -->
+          <div class="project-card" data-category="ai-tools">
+            <div class="card-glow"></div>
+            <div class="project-header">
+              <span class="category-badge cyan">Applied AI</span>
+              <span class="badge-role">Python · Flask · OpenAI</span>
+            </div>
+            <h3 class="project-title">GPT Helper App &amp; Package</h3>
+            <p class="project-desc">
+              Lightweight Python package and Flask conversational interface for interacting with ChatGPT models easily. Features persistent multi-session sidebar history and keyboard shortcut navigation.
+            </p>
+            <div class="project-tags">
+              <span>Python</span>
+              <span>Flask</span>
+              <span>OpenAI API</span>
+              <span>Session Memory</span>
+              <span>Custom Package</span>
+            </div>
+            <div class="project-footer">
+              <a href="https://github.com/KishoreM-04/GPT_Helper_App" target="_blank" rel="noopener" class="project-link">
+                <span>View Repository</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activity & GitHub Live Feed -->
+    <section class="section activity-section" id="activity">
+      <div class="container">
+        <div class="section-tag">PUBLIC ACTIVITY</div>
+        <h2 class="section-title">Open Source Contributions</h2>
+        <p class="section-subtitle">Real public commit activity and engineering consistency across repositories.</p>
+
+        <div class="activity-card">
+          <div class="activity-header">
+            <div>
+              <h3>Contribution Graph &amp; Animated Telemetry</h3>
+              <p>Nightly synchronized contribution graph tracking verified public commits on GitHub.</p>
+            </div>
+            <span class="status-pill-green">Verified Activity</span>
+          </div>
+
+          <div class="snake-graphic-container">
+            <img src="../assets/github-contribution-snake-dark.svg" alt="GitHub Contribution Snake Animation" class="snake-img" onerror="this.src='../assets/github-contribution-snake.svg'">
+          </div>
+
+          <div class="activity-links-row">
+            <a href="https://github.com/KishoreM-04" target="_blank" rel="noopener" class="btn btn-ghost">
+              <span>View Full GitHub Profile (@KishoreM-04)</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-container">
+        <div class="contact-box">
+          <div class="section-tag">GET IN TOUCH</div>
+          <h2 class="section-title">Let's Build Something Exceptional</h2>
+          <p class="contact-subtitle">
+            Open to software engineering roles, full-stack web platforms, mobile systems development, and IoT telemetry projects.
+          </p>
+
+          <div class="contact-methods">
+            <a href="mailto:kishor.mullappilly@gmail.com" class="contact-pill email-pill">
+              <span class="pill-icon">✉️</span>
+              <span class="pill-text">kishor.mullappilly@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/in/kishorem2004" target="_blank" rel="noopener" class="contact-pill">
+              <span class="pill-icon">💼</span>
+              <span class="pill-text">linkedin.com/in/kishorem2004</span>
+            </a>
+            <a href="https://github.com/KishoreM-04" target="_blank" rel="noopener" class="contact-pill">
+              <span class="pill-icon">💻</span>
+              <span class="pill-text">github.com/KishoreM-04</span>
+            </a>
+          </div>
+
+          <div class="location-badge">
+            <span>📍 Located in Kerala, India 🇮🇳 · Working with Global Tech Teams</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-left">
+        <span class="brand-monogram sm">KM</span>
+        <span>© 2026 Kishore M. Crafted with pure HTML, CSS, and Vanilla JS.</span>
+      </div>
+      <div class="footer-right">
+        <a href="#hero">Back to Top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

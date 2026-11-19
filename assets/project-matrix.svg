@@ -1,0 +1,280 @@
+<svg fill="none" viewBox="0 0 900 460" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .showcase-container {
+          width: 100%;
+          box-sizing: border-box;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        .showcase-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 14px;
+        }
+
+        .proj-card {
+          position: relative;
+          background: #090E1A;
+          background: linear-gradient(135deg, rgba(13, 20, 36, 0.95) 0%, rgba(7, 11, 20, 0.95) 100%);
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          padding: 16px 18px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          overflow: hidden;
+          box-sizing: border-box;
+          height: 98px;
+        }
+
+        .proj-card.flagship {
+          border-color: rgba(0, 242, 254, 0.35);
+          background: linear-gradient(135deg, rgba(0, 242, 254, 0.08) 0%, rgba(9, 14, 26, 0.95) 100%);
+        }
+
+        .card-top {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 4px;
+        }
+
+        .proj-name {
+          font-size: 14.5px;
+          font-weight: 700;
+          color: #FFFFFF;
+          letter-spacing: -0.01em;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          margin: 0;
+        }
+
+        .proj-badge {
+          font-size: 10px;
+          font-weight: 700;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          padding: 3px 7px;
+          border-radius: 4px;
+        }
+
+        .badge-cyan {
+          background: rgba(0, 242, 254, 0.12);
+          color: #00F2FE;
+          border: 1px solid rgba(0, 242, 254, 0.3);
+        }
+        .badge-emerald {
+          background: rgba(0, 245, 160, 0.12);
+          color: #00F5A0;
+          border: 1px solid rgba(0, 245, 160, 0.3);
+        }
+        .badge-purple {
+          background: rgba(168, 85, 247, 0.12);
+          color: #C084FC;
+          border: 1px solid rgba(168, 85, 247, 0.3);
+        }
+        .badge-amber {
+          background: rgba(251, 191, 36, 0.12);
+          color: #FBBF24;
+          border: 1px solid rgba(251, 191, 36, 0.3);
+        }
+
+        .proj-desc {
+          font-size: 11.5px;
+          color: #94A3B8;
+          line-height: 1.35;
+          margin: 3px 0 6px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .tech-row {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          flex-wrap: nowrap;
+          overflow: hidden;
+        }
+
+        .tech-tag {
+          font-size: 10px;
+          font-weight: 500;
+          color: #CBD5E1;
+          background: rgba(255, 255, 255, 0.04);
+          border: 1px solid rgba(255, 255, 255, 0.07);
+          padding: 2px 6px;
+          border-radius: 4px;
+        }
+
+        .beacon-dot {
+          width: 7px;
+          height: 7px;
+          border-radius: 50%;
+          display: inline-block;
+          animation: pulseBeacon 2.5s infinite ease-in-out;
+        }
+        .beacon-cyan { background: #00F2FE; box-shadow: 0 0 6px #00F2FE; }
+        .beacon-green { background: #00F5A0; box-shadow: 0 0 6px #00F5A0; }
+
+        @keyframes pulseBeacon {
+          0%, 100% { opacity: 0.6; transform: scale(0.9); }
+          50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .beacon-dot { animation: none !important; }
+        }
+      </style>
+
+      <div class="showcase-container">
+        <div class="showcase-grid">
+          <!-- 1. Mentrix -->
+          <div class="proj-card flagship">
+            <div>
+              <div class="card-top">
+                <h4 class="proj-name"><span class="beacon-dot beacon-cyan"></span>Mentrix</h4>
+                <span class="proj-badge badge-cyan">⭐ Flagship Platform</span>
+              </div>
+              <div class="proj-desc">Multi-tenant institutional mentor-mentee hub with local AI inference &amp; RBAC</div>
+            </div>
+            <div class="tech-row">
+              <span class="tech-tag">Django</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Local LLMs (Ollama)</span>
+              <span class="tech-tag">Google OAuth</span>
+              <span class="tech-tag">ReportLab PDF</span>
+            </div>
+          </div>
+
+          <!-- 2. Integrated Food & Grocery Delivery -->
+          <div class="proj-card">
+            <div>
+              <div class="card-top">
+                <h4 class="proj-name"><span class="beacon-dot beacon-green"></span>Food &amp; Grocery Ecosystem</h4>
+                <span class="proj-badge badge-emerald">Mobile &amp; Web</span>
+              </div>
+              <div class="proj-desc">Dual commerce ecosystem: Django backend merchant portal + Native Android client</div>
+            </div>
+            <div class="tech-row">
+              <span class="tech-tag">Android (Java)</span>
+              <span class="tech-tag">Django API</span>
+              <span class="tech-tag">Picasso</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Cart Engine</span>
+            </div>
+          </div>
+
+          <!-- 3. Remote Control for Air-Purifying Robot -->
+          <div class="proj-card">
+            <div>
+              <div class="card-top">
+                <h4 class="proj-name"><span class="beacon-dot beacon-cyan"></span>EcoBreath PuriBot Control</h4>
+                <span class="proj-badge badge-cyan">IoT &amp; Robotics</span>
+              </div>
+              <div class="proj-desc">Native Android controller for air-purifying robot with live telemetry &amp; APK build</div>
+            </div>
+            <div class="tech-row">
+              <span class="tech-tag">Android (Java)</span>
+              <span class="tech-tag">IoT Telemetry</span>
+              <span class="tech-tag">MQTT Signals</span>
+              <span class="tech-tag">Hardware UI</span>
+              <span class="tech-tag">Release APK</span>
+            </div>
+          </div>
+
+          <!-- 4. TaskFlow -->
+          <div class="proj-card">
+            <div>
+              <div class="card-top">
+                <h4 class="proj-name"><span class="beacon-dot beacon-green"></span>TaskFlow</h4>
+                <span class="proj-badge badge-emerald">Cloud Full-Stack</span>
+              </div>
+              <div class="proj-desc">Task management engine with priority matrix, AJAX toggles &amp; Railway PaaS config</div>
+            </div>
+            <div class="tech-row">
+              <span class="tech-tag">Django 5.1</span>
+              <span class="tech-tag">Python 3.11</span>
+              <span class="tech-tag">Railway PaaS</span>
+              <span class="tech-tag">WhiteNoise</span>
+              <span class="tech-tag">AJAX</span>
+            </div>
+          </div>
+
+          <!-- 5. Medical Equipment Warehouse Management -->
+          <div class="proj-card">
+            <div>
+              <div class="card-top">
+                <h4 class="proj-name"><span class="beacon-dot beacon-amber"></span>Medical Warehouse System</h4>
+                <span class="proj-badge badge-amber">Supply Logistics</span>
+              </div>
+              <div class="proj-desc">Enterprise medical inventory logistics, multi-branch tracking &amp; order fulfillment</div>
+            </div>
+            <div class="tech-row">
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Inventory Schema</span>
+              <span class="tech-tag">Branch Routing</span>
+              <span class="tech-tag">Auth</span>
+            </div>
+          </div>
+
+          <!-- 6. Splendore 2025 Photo Booth -->
+          <div class="proj-card">
+            <div>
+              <div class="card-top">
+                <h4 class="proj-name"><span class="beacon-dot beacon-purple"></span>Splendore Photo Booth</h4>
+                <span class="proj-badge badge-purple">Event Tech</span>
+              </div>
+              <div class="proj-desc">Native Android camera app with custom circular frames &amp; festival overlay effects</div>
+            </div>
+            <div class="tech-row">
+              <span class="tech-tag">Android (Java)</span>
+              <span class="tech-tag">Camera API</span>
+              <span class="tech-tag">Dynamic Overlay</span>
+              <span class="tech-tag">Release APK</span>
+            </div>
+          </div>
+
+          <!-- 7. Dignito Fest Management App -->
+          <div class="proj-card">
+            <div>
+              <div class="card-top">
+                <h4 class="proj-name"><span class="beacon-dot beacon-purple"></span>Dignito Fest Management</h4>
+                <span class="proj-badge badge-purple">Mobile Operations</span>
+              </div>
+              <div class="proj-desc">Cross-platform mobile application for college fest events, schedule &amp; registration</div>
+            </div>
+            <div class="tech-row">
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Dart</span>
+              <span class="tech-tag">Material UI</span>
+              <span class="tech-tag">State Management</span>
+            </div>
+          </div>
+
+          <!-- 8. GPT Helper App -->
+          <div class="proj-card">
+            <div>
+              <div class="card-top">
+                <h4 class="proj-name"><span class="beacon-dot beacon-cyan"></span>GPT Helper Suite</h4>
+                <span class="proj-badge badge-cyan">Applied AI</span>
+              </div>
+              <div class="proj-desc">Flask conversational interface &amp; reusable Python library with multi-session memory</div>
+            </div>
+            <div class="tech-row">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Flask</span>
+              <span class="tech-tag">OpenAI API</span>
+              <span class="tech-tag">Session Memory</span>
+              <span class="tech-tag">Custom Lib</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>

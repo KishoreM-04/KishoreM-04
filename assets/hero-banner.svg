@@ -1,0 +1,295 @@
+<svg fill="none" viewBox="0 0 900 320" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+  <foreignObject width="100%" height="100%">
+    <div xmlns="http://www.w3.org/1999/xhtml">
+      <style>
+        .container {
+          position: relative;
+          width: 100%;
+          height: 320px;
+          background: #070B14;
+          background: radial-gradient(circle at 85% 15%, rgba(127, 0, 255, 0.18) 0%, transparent 45%),
+                      radial-gradient(circle at 15% 85%, rgba(0, 242, 254, 0.15) 0%, transparent 40%),
+                      linear-gradient(135deg, #070B14 0%, #0D1322 100%);
+          border-radius: 16px;
+          border: 1px solid rgba(255, 255, 255, 0.08);
+          box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.6);
+          overflow: hidden;
+          font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+          box-sizing: border-box;
+          padding: 36px 44px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+
+        /* Ambient Cyber Grid Overlay */
+        .grid-overlay {
+          position: absolute;
+          inset: 0;
+          background-image: 
+            linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+          background-size: 32px 32px;
+          mask-image: radial-gradient(circle at 50% 50%, black 50%, transparent 95%);
+          pointer-events: none;
+        }
+
+        /* Glowing Floating Nodes */
+        .orb {
+          position: absolute;
+          border-radius: 50%;
+          filter: blur(40px);
+          pointer-events: none;
+          opacity: 0.6;
+          animation: pulseOrb 8s ease-in-out infinite alternate;
+        }
+        .orb-1 {
+          width: 220px;
+          height: 220px;
+          background: #00F2FE;
+          top: -60px;
+          right: -40px;
+          animation-duration: 7s;
+        }
+        .orb-2 {
+          width: 180px;
+          height: 180px;
+          background: #7F00FF;
+          bottom: -40px;
+          left: 10%;
+          animation-duration: 9s;
+          animation-delay: -3s;
+        }
+
+        @keyframes pulseOrb {
+          0% { transform: scale(0.9) translate(0, 0); opacity: 0.35; }
+          50% { transform: scale(1.15) translate(15px, -10px); opacity: 0.65; }
+          100% { transform: scale(0.95) translate(-10px, 15px); opacity: 0.4; }
+        }
+
+        /* Floating Geometric Elements */
+        .geo-shape {
+          position: absolute;
+          border: 1px solid rgba(0, 242, 254, 0.25);
+          pointer-events: none;
+        }
+        .geo-1 {
+          width: 54px;
+          height: 54px;
+          border-radius: 12px;
+          right: 90px;
+          top: 50px;
+          transform: rotate(45deg);
+          animation: spinFloat 16s linear infinite;
+        }
+        .geo-2 {
+          width: 32px;
+          height: 32px;
+          border-radius: 6px;
+          right: 210px;
+          bottom: 60px;
+          border-color: rgba(127, 0, 255, 0.35);
+          animation: floatSlow 6s ease-in-out infinite alternate;
+        }
+        .geo-3 {
+          width: 18px;
+          height: 18px;
+          border-radius: 50%;
+          border: 2px solid rgba(0, 245, 160, 0.35);
+          right: 70px;
+          bottom: 110px;
+          animation: floatSlow 5s ease-in-out infinite alternate-reverse;
+        }
+
+        @keyframes spinFloat {
+          0% { transform: rotate(0deg) translateY(0); }
+          50% { transform: rotate(180deg) translateY(-14px); }
+          100% { transform: rotate(360deg) translateY(0); }
+        }
+        @keyframes floatSlow {
+          0% { transform: translateY(0) scale(1); }
+          100% { transform: translateY(-12px) scale(1.05); }
+        }
+
+        /* Top Tagline Pill */
+        .badge-row {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          position: relative;
+          z-index: 2;
+        }
+        .tag-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          padding: 5px 13px;
+          border-radius: 999px;
+          background: rgba(0, 242, 254, 0.08);
+          border: 1px solid rgba(0, 242, 254, 0.28);
+          color: #00F2FE;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+        }
+        .status-pill {
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 5px 13px;
+          border-radius: 999px;
+          background: rgba(0, 245, 160, 0.08);
+          border: 1px solid rgba(0, 245, 160, 0.3);
+          color: #00F5A0;
+          font-size: 11px;
+          font-weight: 600;
+          letter-spacing: 0.03em;
+        }
+        .beacon {
+          position: relative;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #00F5A0;
+          box-shadow: 0 0 10px #00F5A0;
+        }
+        .beacon::after {
+          content: "";
+          position: absolute;
+          inset: -4px;
+          border-radius: 50%;
+          border: 1.5px solid #00F5A0;
+          animation: ripple 2s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        @keyframes ripple {
+          0% { transform: scale(0.8); opacity: 1; }
+          100% { transform: scale(2.4); opacity: 0; }
+        }
+
+        /* Typography */
+        .title-group {
+          position: relative;
+          z-index: 2;
+          margin-top: 8px;
+        }
+        .name {
+          margin: 0;
+          font-size: 42px;
+          font-weight: 800;
+          letter-spacing: -0.03em;
+          line-height: 1.1;
+          background: linear-gradient(135deg, #FFFFFF 20%, #B8E4FF 55%, #00F2FE 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          display: flex;
+          align-items: center;
+          gap: 14px;
+        }
+        .role {
+          margin: 8px 0 0;
+          font-size: 17px;
+          font-weight: 500;
+          color: #94A3B8;
+          letter-spacing: -0.01em;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .highlight {
+          color: #38BDF8;
+          font-weight: 600;
+        }
+        .highlight-purple {
+          color: #C084FC;
+          font-weight: 600;
+        }
+
+        /* Footer Chips */
+        .footer-chips {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 12px;
+          position: relative;
+          z-index: 2;
+          padding-top: 14px;
+          border-top: 1px solid rgba(255, 255, 255, 0.07);
+        }
+        .chip {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 12.5px;
+          color: #CBD5E1;
+          font-weight: 500;
+        }
+        .chip-icon {
+          color: #00F2FE;
+          font-size: 14px;
+        }
+        .chip-sep {
+          color: rgba(255, 255, 255, 0.2);
+        }
+
+        /* Accessibility: Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+          .orb, .geo-1, .geo-2, .geo-3, .beacon::after {
+            animation: none !important;
+          }
+        }
+      </style>
+
+      <div class="container">
+        <div class="grid-overlay"></div>
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="geo-shape geo-1"></div>
+        <div class="geo-shape geo-2"></div>
+        <div class="geo-shape geo-3"></div>
+
+        <!-- Top Badges -->
+        <div class="badge-row">
+          <span class="tag-pill">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            Systems &amp; Full-Stack Developer
+          </span>
+          <span class="status-pill">
+            <span class="beacon"></span>
+            Open to Engineering Opportunities
+          </span>
+        </div>
+
+        <!-- Main Title & Role -->
+        <div class="title-group">
+          <h1 class="name">Kishore M</h1>
+          <p class="role">
+            Building <span class="highlight">Enterprise Django Platforms</span>, <span class="highlight-purple">IoT Telemetry Systems</span> &amp; Modern Applications
+          </p>
+        </div>
+
+        <!-- Meta Footer Chips -->
+        <div class="footer-chips">
+          <span class="chip">
+            <span class="chip-icon">🎓</span>
+            MCA @ Rajagiri College of Social Sciences
+          </span>
+          <span class="chip-sep">•</span>
+          <span class="chip">
+            <span class="chip-icon">📍</span>
+            Kerala, India
+          </span>
+          <span class="chip-sep">•</span>
+          <span class="chip">
+            <span class="chip-icon">⚡</span>
+            Python · Django · Android · IoT · Edge AI
+          </span>
+        </div>
+      </div>
+    </div>
+  </foreignObject>
+</svg>
