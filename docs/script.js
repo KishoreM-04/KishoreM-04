@@ -680,7 +680,7 @@ function initBotChatTerminal() {
         robotics: "PuriBot / EcoBreath combines hardware and mobile systems: an ESP32 microcontroller continuously reads ambient air particulate (PM2.5) and hazardous gases, streaming telemetry to a native Java Android controller for live dashboarding and omnidirectional motor drive.",
         research: "Kishore has published 2 peer-reviewed international conference papers: (1) 'Revolutionizing Healthcare: The Integration of Robotics in Medicine' at DeNovo23, and (2) 'Examining the Impact of Artificial Intelligence on Personalized Healthcare' at Bharata Mata College (ISBN: 978-81-973274-9-0).",
         security: "Enterprise security architecture in Kishore's platforms includes: Domain-Restricted Google OAuth2, Single-Session Concurrency Guards that prevent parallel compromised sessions, OTP-based recovery, and strict input sanitization.",
-        hire: "Kishore M is an MCA Candidate at Rajagiri College of Social Sciences (Autonomous) with an undergrad BCA CGPA of 8.78. He is available for Full-Stack, Backend (Django/Python), and IoT/Mobile engineering opportunities. Reach him directly via LinkedIn (in/kishorem) or email (kishor.mullappilly@gmail.com)."
+        hire: "Kishore M is an MCA Candidate at Rajagiri College of Social Sciences (Autonomous) with an undergrad BCA CGPA of 8.78. He is available for Full-Stack, Backend (Django/Python), and IoT/Mobile engineering opportunities. Reach him directly via LinkedIn (linkedin.com/in/kishorem2004) or email (kishor.mullappilly@gmail.com)."
       }
     },
     puribot: {

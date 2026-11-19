@@ -1,7 +1,7 @@
 <div align="center">
 
 <!-- Futuristic AI Hero Banner -->
-<a href="https://kishorem-04.github.io">
+<a href="https://kishorem-04.github.io/KishoreM-04/">
   <img src="assets/hero-banner.svg" alt="Kishore M — Next-Gen AI Developer Universe" width="100%">
 </a>
 
@@ -9,7 +9,7 @@
 
 <!-- Holographic Control Quicklinks -->
 <p align="center">
-  <a href="www.linkedin.com/in/kishorem2004" target="_blank">
+  <a href="https://www.linkedin.com/in/kishorem2004" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
   </a>
   &nbsp;
@@ -21,7 +21,7 @@
     <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub">
   </a>
   &nbsp;
-  <a href="https://kishorem-04.github.io">
+  <a href="https://kishorem-04.github.io/KishoreM-04/">
     <img src="https://img.shields.io/badge/Launch%20AI%20Portfolio-00F2FE?style=for-the-badge&logo=googlechrome&logoColor=030712" alt="Interactive Portfolio">
   </a>
 </p>
@@ -250,11 +250,11 @@
 
 Experience the live interactive Web Lab featuring real-time particle physics, playable Cyber Arcade quest, and the responsive AURA-01 companion:
 
-**👉 [Launch Kishore M's Interactive AI Portfolio](https://kishorem-04.github.io)**
+**👉 [Launch Kishore M's Interactive AI Portfolio](https://kishorem-04.github.io/KishoreM-04/)**
 
 <br/>
 
-**[LinkedIn Profile](https://www.linkedin.com/in/kishorem)** • **[Direct Email](mailto:kishor.mullappilly@gmail.com)** • **[GitHub Repositories](https://github.com/KishoreM-04?tab=repositories)**
+**[LinkedIn Profile](https://www.linkedin.com/in/kishorem2004)** • **[Direct Email](mailto:kishor.mullappilly@gmail.com)** • **[GitHub Repositories](https://github.com/KishoreM-04?tab=repositories)**
 
 <sub>© 2026 Kishore M · Engineered with passion in Kerala, India 🇮🇳</sub>
 
